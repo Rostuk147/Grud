@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "name": "dfg",
+      "color": "gd",
+      "id": 17
+    },
+    {
+      "name": "dfgfg",
+      "color": "gd",
+      "id": 18
+    },
+    {
+      "name": "dfg",
+      "color": "fg",
+      "id": 19
+    },
+    {
+      "name": "sdds",
+      "color": "gd",
+      "id": 20
+    },
+    {
+      "name": "sddsf",
+      "color": "gdd",
+      "id": 21
+    },
+    {
+      "name": "f",
+      "color": "d",
+      "id": 22
+    }
+  ]
+}
