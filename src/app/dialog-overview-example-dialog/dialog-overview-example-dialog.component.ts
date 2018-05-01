@@ -1,24 +1,22 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { PostService } from '../service/post.service';
-import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-dialog-overview-example-dialog',
   templateUrl: './dialog-overview-example-dialog.component.html',
   styleUrls: ['./dialog-overview-example-dialog.component.css']
 })
 export class DialogOverviewExampleDialogComponent implements OnInit {
-  EditForm: FormGroup;
+  form: FormGroup;
   constructor(
     private service: PostService,
     public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    private fb: FormBuilder) { 
-      this.EditForm = this.fb.group({
-        name: [null],
-        color: [null],
-        id: [null],
-      });
+    @Inject(MAT_DIALOG_DATA) public data: any) { 
+      this.form = new FormGroup({
+        'name': new FormControl(null, [Validators.required]),
+        'color': new FormControl(null, [Validators.required ])
+      })
     }
 
   onNoClick(): void {
@@ -27,7 +25,8 @@ export class DialogOverviewExampleDialogComponent implements OnInit {
 
 
   Edit() {
-      this.service.editPut(this.data.id, this.EditForm.value).subscribe( () => {
+      this.service.editPut(this.data.id, this.form.value).subscribe( () => {
+        console.log(this.form);
         this.dialogRef.close();
       });
   }

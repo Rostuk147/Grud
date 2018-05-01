@@ -1,34 +1,19 @@
 {
   "posts": [
     {
-      "name": "dfg",
-      "color": "gd",
-      "id": 17
+      "name": "mariadsf",
+      "color": "asfsdf",
+      "id": 1
     },
     {
-      "name": "dfgfg",
-      "color": "gd",
-      "id": 18
+      "name": "mariadsgfsdf",
+      "color": "asfdsfsdf",
+      "id": 2
     },
     {
-      "name": "dfg",
-      "color": "fg",
-      "id": 19
-    },
-    {
-      "name": "sdds",
-      "color": "gd",
-      "id": 20
-    },
-    {
-      "name": "sddsf",
-      "color": "gdd",
-      "id": 21
-    },
-    {
-      "name": "f",
-      "color": "d",
-      "id": 22
+      "name": "mariadsgfsdfdsf",
+      "color": "asfdsfsdfdsf",
+      "id": 3
     }
   ]
 }

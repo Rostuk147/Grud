@@ -1,14 +1,17 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'search'
+  name: 'search',
+  pure: false
 })
 export class SearchPipe implements PipeTransform {
 
   transform(posts, value: string) {
-    return posts.filter(post => {
-      return post.name.includes(value || value.toUpperCase());
-    })
+    if (posts.length === 0 || value === '' ) {
+      return posts;
+    }
+      return posts.filter(post => {
+        return post.name.toLowerCase().includes(value.toLowerCase() );
+      })
   }
-
 }

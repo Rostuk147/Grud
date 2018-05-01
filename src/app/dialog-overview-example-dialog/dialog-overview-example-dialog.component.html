@@ -1,5 +1,5 @@
 <div class="input-wrapp">
-    <form [formGroup]="EditForm" novalidate>
+    <form [formGroup]="form" novalidate>
         <mat-form-field class="example-full-width">
             <input matInput placeholder="name"  formControlName="name" value="{{data.name}}">
         </mat-form-field>
@@ -7,10 +7,7 @@
         <mat-form-field class="example-full-width">
             <input matInput placeholder="Color"  formControlName="color" value="{{data.color}}">
         </mat-form-field>
-            
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Id"  formControlName="id" value="{{data.id}}">
-        </mat-form-field>
-        <button mat-raised-button color="primary" (click) = 'Edit()'>Ok</button>
+
+        <button [disabled]="form.invalid" mat-raised-button color="primary" (click) = 'Edit()'>Ok</button>
     </form>
 </div>
