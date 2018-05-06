@@ -8,6 +8,10 @@
             <input matInput placeholder="Color"  formControlName="color" value="{{data.color}}">
         </mat-form-field>
 
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Price"  formControlName="price" value="{{data.price}}">
+        </mat-form-field>
+
         <button [disabled]="form.invalid" mat-raised-button color="primary" (click) = 'Edit()'>Ok</button>
     </form>
 </div>

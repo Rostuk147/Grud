@@ -15,7 +15,8 @@ export class DialogOverviewExampleDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any) { 
       this.form = new FormGroup({
         'name': new FormControl(null, [Validators.required]),
-        'color': new FormControl(null, [Validators.required ])
+        'color': new FormControl(null, [Validators.required ]),
+        'price': new FormControl(null, [Validators.required ])
       })
     }
 
@@ -23,10 +24,8 @@ export class DialogOverviewExampleDialogComponent implements OnInit {
     this.dialogRef.close();
   }
 
-
   Edit() {
       this.service.editPut(this.data.id, this.form.value).subscribe( () => {
-        console.log(this.form);
         this.dialogRef.close();
       });
   }

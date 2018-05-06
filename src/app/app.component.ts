@@ -18,12 +18,15 @@ interface Post {
 })
 export class AppComponent implements OnInit{
   posts: Post[] = [];
-  postName:string = ''
-  postColor:string = ''
-  nameValidator;
+  postName:string = '';
+  postColor:string = '';
+  postPrice:number;
   name: string = 'nameTest';
+  nameValidator;
   colorValidator;
-  searchName = ''
+  priceValidator;
+  searchName = '';
+  selected = ''
 
   constructor(
     public dialog: MatDialog,
@@ -35,8 +38,9 @@ export class AppComponent implements OnInit{
       width: '550px',
       data: { 
         name: post.name,
-        id: post.id,
-        color: post.color
+        color: post.color,
+        price: post.price,
+        id: post.id
       }
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -62,10 +66,14 @@ export class AppComponent implements OnInit{
     this.colorValidator = new FormControl('', [
       Validators.required
     ]);
+
+    this.priceValidator = new FormControl('', [
+      Validators.required
+    ]);
   }
 
   addNewPost() {
-    this.service.addPost(this.postName, this.postColor)
+    this.service.addPost(this.postName, this.postColor, this.postPrice)
     .subscribe((post: Post) => {
       this.posts.push(post);
     });
@@ -78,11 +86,34 @@ export class AppComponent implements OnInit{
     });
   }
 
+  searchFilter = [
+    {value: 'Price', viewValue: 'Price'},
+    {value: 'Name', viewValue: 'Name'}
+  ];
 
-  
-  
+  priceFilter(itemA, itemB) {
+    return itemA.price - itemB.price;
+  }
 
- 
+  nameFilter(a,b){
+    if(a.name < b.name) return -1;
+    if(a.name > b.name) return 1;
+    return 0;
+  }
+
+  filterIteams(selected){
+    if(selected === 'Price'){
+      this.posts.sort(this.priceFilter);
+     
+    } else {
+       this.posts.sort(this.nameFilter);
+    }
+  }
+
+
+
+
+
 
 
 }

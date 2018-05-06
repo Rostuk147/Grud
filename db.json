@@ -1,19 +1,46 @@
 {
   "posts": [
     {
-      "name": "mariadsf",
-      "color": "asfsdf",
+      "name": "sdfd",
+      "color": "sfd",
+      "price": "1211",
       "id": 1
     },
     {
-      "name": "mariadsgfsdf",
-      "color": "asfdsfsdf",
+      "name": "Adsf",
+      "color": "ds",
+      "price": "100232",
       "id": 2
     },
     {
-      "name": "mariadsgfsdfdsf",
-      "color": "asfdsfsdfdsf",
+      "name": "swfsc",
+      "color": "scsd",
+      "price": "100",
       "id": 3
+    },
+    {
+      "name": "Aaa",
+      "color": "black",
+      "price": "10",
+      "id": 5
+    },
+    {
+      "name": "Bba",
+      "color": "black",
+      "price": "10",
+      "id": 6
+    },
+    {
+      "name": "Ababa",
+      "color": "black",
+      "price": "10",
+      "id": 7
+    },
+    {
+      "name": "вівіпу",
+      "color": "ма3",
+      "price": "34",
+      "id": 8
     }
   ]
 }

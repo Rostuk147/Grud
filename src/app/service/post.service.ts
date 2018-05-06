@@ -1,20 +1,19 @@
 import {HttpClient} from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class PostService {
     constructor(private http: HttpClient){}
 
-    getPost(): Observable<any> {
+    getPost() {
         return this.http.get('http://localhost:3000/posts');
     } 
 
-    addPost(postName: string, postColor: string) {
+    addPost(postName: string, postColor: string, postPrice: number) {
         const data = {
             name: postName,
-            color: postColor
+            color: postColor,
+            price: postPrice
         }
         return this.http.post('http://localhost:3000/posts', data);
     }
@@ -24,7 +23,7 @@ export class PostService {
     }
 
     editPut(id, data) {
-        return this.http.put('http://localhost:3000/posts/' + id, data);
+        return this.http.put(`http://localhost:3000/posts/${id}`,data);
     }
     
    
