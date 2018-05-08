@@ -13,6 +13,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { SearchPipe } from './search.pipe';
+import { AuthModule } from './auth/auth.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { SearchPipe } from './search.pipe';
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    AuthModule,
+    AppRoutingModule
   ],
   entryComponents: [
     DialogOverviewExampleDialogComponent
