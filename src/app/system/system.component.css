@@ -1,0 +1,13 @@
+.wrapper{
+    margin-top: 60px;
+}
+.example-form{
+    margin-top: 50px;
+}
+
+.content-wrapper{
+    margin: 100px 0;
+}
+.wrapper span{
+    font-weight: bold;
+}

@@ -5,10 +5,16 @@ import { RegistrationComponent } from './registration/registration.component';
 import { AuthComponent } from './auth.component';
 import { AuthRoutingModule } from './auth-routing.module';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule, MatSelectModule } from '@angular/material';
+
 @NgModule({
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    MatInputModule,
+    MatSelectModule
+
   ],
   declarations: [
      LoginComponent,

@@ -1,0 +1,71 @@
+
+<app-toolbar></app-toolbar>
+
+<div class="content-wrapper">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+                <mat-form-field class="example-full-width">
+                    <input [(ngModel)]="searchName" matInput placeholder="Search">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-select placeholder="Filter By:" [(value)]="selected">
+                      <mat-option *ngFor="let filter of searchFilter" [value]="filter.value" (click)="filterIteams(selected)">
+                        {{ filter.viewValue }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+          
+                <div class="add-form">
+                        <form class="example-form">
+                            <mat-form-field class="example-full-width">
+                              <input [(ngModel)]="postName" matInput placeholder="Name" [formControl]="nameValidator">
+                              <mat-error *ngIf="nameValidator.hasError('required')">
+                                Name is <strong>required</strong>
+                              </mat-error>
+                            </mat-form-field>
+                
+                            <mat-form-field class="example-full-width">
+                                <input [(ngModel)]="postColor" matInput placeholder="Color" [formControl]="colorValidator">
+                                <mat-error *ngIf="colorValidator.hasError('required')">
+                                  Color is <strong>required</strong>
+                                </mat-error>
+                              </mat-form-field>
+
+                              <mat-form-field class="example-full-width">
+                                <input [(ngModel)]="postPrice" matInput placeholder="Price" [formControl]="priceValidator">
+                                <mat-error *ngIf="priceValidator.hasError('required')">
+                                  Price is <strong>required</strong>
+                                </mat-error>
+                              </mat-form-field>
+                          </form>
+                    </div>
+                    <button (click)="addNewPost()" mat-raised-button color="primary">Add New Post</button>
+
+                    <div *ngFor="let post of posts | search:searchName">
+                        <div class="row wrapper">
+                            <div class="col-md-2">
+                                <span>Name:</span>
+                                {{post.name}} 
+                            </div>
+                            <div class="col-md-2">
+                                <span>Color:</span>
+                                {{post.color}} 
+                            </div>
+                            <div class="col-md-2">
+                                <span>Price:</span>
+                                {{post.price}}
+                            </div>
+                            <div class=" col-md-2 offset-md-2">
+                                <button (click)="deletePost(post)" mat-raised-button color="warn">Delete</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button mat-raised-button  (click)="openDialog(post)" color="accent">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+</div> 
