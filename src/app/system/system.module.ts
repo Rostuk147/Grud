@@ -34,6 +34,9 @@ import { SystemRoutingModule } from './system-routing.module';
     DialogOverviewExampleDialogComponent,
     SearchPipe
   ],
+  entryComponents: [
+    DialogOverviewExampleDialogComponent
+  ],
   providers: [PostService]
 })
 

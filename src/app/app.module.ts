@@ -6,6 +6,7 @@ import { NgModel, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SystemModule } from './system/system.module';
+import { MatCheckboxModule } from '@angular/material';
 
 
 @NgModule({

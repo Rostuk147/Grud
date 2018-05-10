@@ -7,14 +7,16 @@ import { AuthRoutingModule } from './auth-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatSelectModule } from '@angular/material';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     CommonModule,
     AuthRoutingModule,
     MatInputModule,
-    MatSelectModule
-
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [
      LoginComponent,

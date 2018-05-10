@@ -1,15 +1,19 @@
 Login
 
-<form>
+<form [formGroup]="form">
   <mat-form-field>
-    <input matInput placeholder="Input">
+    <input matInput placeholder="Enter your email" formControlName = "email" required>
+    <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">{{getErrorMessageEmail()}}</mat-error>
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" formControlName = "password" required>
     <div matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</div>
+    <mat-error *ngIf="form.get('password').invalid && form.get('password').touched">{{getErrorMessagePassword()}}</mat-error>
   </mat-form-field>
 
+
+  <button (click)="test()">Submit</button>
 </form>
 
 <a [routerLink]="'/registration'">Зарегистрироваться</a>

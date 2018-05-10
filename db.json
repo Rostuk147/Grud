@@ -1,9 +1,9 @@
 {
   "posts": [
     {
-      "name": "віа",
-      "color": "а",
-      "price": "2",
+      "name": "віаef",
+      "color": "аsf",
+      "price": "25",
       "id": 9
     },
     {
@@ -17,6 +17,18 @@
       "color": "ааа",
       "price": "21211",
       "id": 11
+    },
+    {
+      "name": "egtds",
+      "color": "dsg",
+      "price": "0",
+      "id": 12
+    },
+    {
+      "name": "egtdsfe",
+      "color": "dsgfewq",
+      "price": "-1",
+      "id": 13
     }
   ]
 }
