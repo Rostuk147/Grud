@@ -28,12 +28,10 @@ export class LoginComponent implements OnInit {
 
   getErrorMessagePassword() {
     return this.form.get('password')['errors']['required'] ? 'Password Required' :
-        this.form.get('password')['errors']['minlength'] ? `Password must be more then ${this.form.get('password')['errors']['minlength']['requiredLength']} symbol. Now we Have ${this.form.get('password')['errors']['minlength']['actualLength']} symbol`:
+        this.form.get('password')['errors']['minlength'] ? `Password must be more then ${this.form.get('password')['errors']['minlength']['requiredLength']} symbol.  Now we Have ${this.form.get('password')['errors']['minlength']['actualLength']} symbol` :
         '';
   }
 
-  test() {
-    console.log(this.form.controls.password)
-  }
+
 
 }
