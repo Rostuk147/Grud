@@ -6,7 +6,7 @@ import { AuthComponent } from './auth.component';
 import { AuthRoutingModule } from './auth-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatSelectModule, MatButtonModule } from '@angular/material';
+import { MatInputModule, MatSelectModule, MatButtonModule, MatIconModule } from '@angular/material';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 @NgModule({
@@ -17,7 +17,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatSelectModule,
     ReactiveFormsModule,
     FormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   declarations: [
      LoginComponent,

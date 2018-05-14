@@ -1,5 +1,6 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { User } from '../models/user.model';
 
 @Injectable()
 export class PostService {
@@ -24,6 +25,14 @@ export class PostService {
 
     editPut(id, data) {
         return this.http.put(`http://localhost:3000/posts/${id}`,data);
+    }
+
+    createNewUser(user: User){
+        return this.http.post('http://localhost:3000/users', user);
+    }
+
+    getUserByEmail(email){
+        return this.http.get('http://localhost:3000/users');
     }
     
    

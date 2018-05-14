@@ -30,5 +30,84 @@
       "price": "-1",
       "id": 13
     }
+  ],
+  "users": [
+    {
+      "name": "sdfedc",
+      "email": "mail@yandex.ru",
+      "password": "123qwesfds",
+      "select": "Male",
+      "id": 1
+    },
+    {
+      "name": "ewfewe",
+      "email": "gavrk.r@yandex.ru",
+      "password": "sdvdv21f",
+      "gender": "Male",
+      "id": 2
+    },
+    {
+      "name": "ewffsdfvewe",
+      "email": "gavrk.r@yandex.ua",
+      "password": "sdvdsdfdsv21f",
+      "gender": "Male",
+      "id": 3
+    },
+    {
+      "name": "Rostuk",
+      "email": "gavrk.r@yandex.ru",
+      "password": "Lusyn1998",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "name": "Lana",
+      "email": "roksa14@yandex.ru",
+      "password": "roksa12",
+      "gender": "Female",
+      "id": 5
+    },
+    {
+      "name": "sdgd",
+      "email": "vdcdfv@ru",
+      "password": "sdgdsgsdg",
+      "gender": "Male",
+      "id": 6
+    },
+    {
+      "name": "sdgsdv2",
+      "email": "sdgdsgds@ru",
+      "password": "dsgdv3",
+      "gender": "Male",
+      "id": 7
+    },
+    {
+      "name": "wegferf2",
+      "email": "roksa14@yandex.ru",
+      "password": "sdgfsdg3",
+      "gender": "Male",
+      "id": 8
+    },
+    {
+      "name": "dgvdv",
+      "email": "vdcdfv@ru",
+      "password": "vdfvbgd32",
+      "gender": "Male",
+      "id": 9
+    },
+    {
+      "name": "sdgdg",
+      "email": "vdcdfv@ru",
+      "password": "db23csdv",
+      "gender": "Male",
+      "id": 10
+    },
+    {
+      "name": "sdfvd1",
+      "email": "vdcdfv@ru",
+      "password": "dscdsfd324",
+      "gender": "Female",
+      "id": 11
+    }
   ]
 }
