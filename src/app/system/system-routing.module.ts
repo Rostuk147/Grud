@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { SystemComponent } from './system.component';
 
 const routes: Routes = [
-  {path: 'system', component: SystemComponent}
+  {path: '', component: SystemComponent}
 ]
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forChild(routes)
   ],
   exports: [RouterModule]
 })

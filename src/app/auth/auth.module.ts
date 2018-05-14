@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule, MatSelectModule, MatButtonModule, MatIconModule } from '@angular/material';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { PostService } from '../service/post.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -18,12 +19,14 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   declarations: [
      LoginComponent,
      RegistrationComponent,
      AuthComponent
-  ]
+  ],
+  providers: [PostService]
 })
 export class AuthModule { }

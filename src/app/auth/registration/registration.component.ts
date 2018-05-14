@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class RegistrationComponent implements OnInit {
 
   form: FormGroup;
+  password: ''
+  passwordRepeat: ''
   constructor(
     private service: PostService,
     private router: Router
@@ -44,9 +46,15 @@ export class RegistrationComponent implements OnInit {
         this.form.get('password')['errors']['minlength'] ? `Password must be more then ${this.form.get('password')['errors']['minlength']['requiredLength']} symbol.  Now we Have ${this.form.get('password')['errors']['minlength']['actualLength']} symbol` :
         '';
   }
-
+  
   getErrorMessageSelect() {
     return this.form.get('select')['errors']['required'] ? 'select Required' :
+        '';
+  }
+
+  getErrorMessagePasswordRepeat(){
+    return this.form.get('passwordRepeat')['errors']['required'] ? 'Password Required' :
+        this.form.get('passwordRepeat')['errors']['minlength'] ? `Password must be more then ${this.form.get('passwordRepeat')['errors']['minlength']['requiredLength']} symbol.  Now we Have ${this.form.get('passwordRepeat')['errors']['minlength']['actualLength']} symbol` :
         '';
   }
 
@@ -63,5 +71,6 @@ export class RegistrationComponent implements OnInit {
       });
     });
   }
+
 
 }

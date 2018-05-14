@@ -5,9 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModel, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
-import { SystemModule } from './system/system.module';
 import { MatCheckboxModule } from '@angular/material';
-
 
 @NgModule({
   declarations: [
@@ -19,8 +17,7 @@ import { MatCheckboxModule } from '@angular/material';
     FormsModule,
     ReactiveFormsModule,
     AuthModule,
-    AppRoutingModule,
-    SystemModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

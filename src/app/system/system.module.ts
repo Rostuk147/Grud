@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SystemComponent } from './system.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatInputModule, MatButtonModule, MatDialogModule, MatSelectModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -16,8 +14,6 @@ import { SystemRoutingModule } from './system-routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
     MatToolbarModule,
     MatInputModule,
     HttpClientModule,
@@ -39,20 +35,4 @@ import { SystemRoutingModule } from './system-routing.module';
   ],
   providers: [PostService]
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export class SystemModule { }
