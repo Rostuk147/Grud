@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { PostService } from '../service/post.service';
-import { Validators, FormControl } from '@angular/forms';
+import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+import { Post } from '../models/post.model';
 
-interface Post {
-  name: string,
-  color: string,
-  id: number
-}
 
 @Component({
   selector: 'app-system',
@@ -17,15 +13,8 @@ interface Post {
 })
 
 export class SystemComponent implements OnInit {
-
-  posts: Post[] = [];
-  postName:string = '';
-  postColor:string = '';
-  postPrice:number;
-  name: string = 'nameTest';
-  nameValidator;
-  colorValidator;
-  priceValidator;
+  form: FormGroup;
+  posts: Post[];
   searchName = '';
   selected = ''
 
@@ -53,7 +42,7 @@ export class SystemComponent implements OnInit {
 
   fnGetPosts() {
     this.service.getPost()
-    .subscribe((post: Post[]) => {
+    .subscribe(( post: Post[]) => {
       this.posts = post;
     })
   }
@@ -61,21 +50,16 @@ export class SystemComponent implements OnInit {
   ngOnInit() {
     this.fnGetPosts();
 
-    this.nameValidator = new FormControl('', [
-      Validators.required
-    ]);
-
-    this.colorValidator = new FormControl('', [
-      Validators.required
-    ]);
-
-    this.priceValidator = new FormControl('', [
-      Validators.required
-    ]);
+    this.form = new FormGroup({
+      'name': new FormControl(null, [Validators.required]),
+      'color': new FormControl(null, [Validators.required]),
+      'price': new FormControl(null, [Validators.required])
+    })
   }
 
-  addNewPost() {
-    this.service.addPost(this.postName, this.postColor, this.postPrice)
+  onSubmit(){
+    const formValue = this.form.value;
+    this.service.addPost(formValue.name, formValue.color, formValue.price)
     .subscribe((post: Post) => {
       this.posts.push(post);
     });
@@ -106,7 +90,6 @@ export class SystemComponent implements OnInit {
   filterIteams(selected){
     if(selected === 'Price'){
       this.posts.sort(this.priceFilter);
-     
     } else {
        this.posts.sort(this.nameFilter);
     }

@@ -18,31 +18,31 @@
                   </mat-form-field>
           
                 <div class="add-form">
-                        <form class="example-form">
+                        <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
                             <mat-form-field class="example-full-width">
-                              <input [(ngModel)]="postName" matInput placeholder="Name" [formControl]="nameValidator">
-                              <mat-error *ngIf="nameValidator.hasError('required')">
+                              <input  matInput placeholder="Name"  formControlName = "name">
+                              <mat-error *ngIf="form.get('name').invalid && form.get('name').touched">
                                 Name is <strong>required</strong>
                               </mat-error>
                             </mat-form-field>
                 
                             <mat-form-field class="example-full-width">
-                                <input [(ngModel)]="postColor" matInput placeholder="Color" [formControl]="colorValidator">
-                                <mat-error *ngIf="colorValidator.hasError('required')">
-                                  Color is <strong>required</strong>
-                                </mat-error>
+                                <input  matInput placeholder="Color"  formControlName = "color">
+                                <mat-error *ngIf="form.get('color').invalid && form.get('color').touched">
+                                    Color is <strong>required</strong>
+                                  </mat-error>
                               </mat-form-field>
 
                               <mat-form-field class="example-full-width">
-                                <input [(ngModel)]="postPrice" matInput placeholder="Price" [formControl]="priceValidator">
-                                <mat-error *ngIf="priceValidator.hasError('required')">
-                                  Price is <strong>required</strong>
-                                </mat-error>
+                                <input  matInput placeholder="Price"  formControlName = "price">
+                                <mat-error *ngIf="form.get('price').invalid && form.get('price').touched">
+                                    Price is <strong>required</strong>
+                                  </mat-error>
                               </mat-form-field>
+                              <button [disabled]="form.invalid" type="submit" mat-raised-button color="primary">Add New Post</button>
                           </form>
                     </div>
-                    <button (click)="addNewPost()" mat-raised-button color="primary">Add New Post</button>
-
+                    
                     <div *ngFor="let post of posts | search:searchName" >
                         <div class="row wrapper">
                             <div class="col-md-2">

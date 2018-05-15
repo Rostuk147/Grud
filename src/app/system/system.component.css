@@ -11,3 +11,7 @@
 .wrapper span{
     font-weight: bold;
 }
+.add-form button{
+    display: block;
+    margin-top: 25px;
+}

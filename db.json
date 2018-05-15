@@ -1,24 +1,6 @@
 {
   "posts": [
     {
-      "name": "віаіа",
-      "color": "аа",
-      "price": "22",
-      "id": 10
-    },
-    {
-      "name": "віаіаіва1",
-      "color": "ааа",
-      "price": "21211",
-      "id": 11
-    },
-    {
-      "name": "egtds",
-      "color": "dsg",
-      "price": "0",
-      "id": 12
-    },
-    {
       "name": "egtdsfe",
       "color": "dsgfewq",
       "price": "-1",
@@ -71,6 +53,66 @@
       "color": "dg",
       "price": "1244",
       "id": 21
+    },
+    {
+      "name": "dsfsdg",
+      "color": "sdg",
+      "price": "1",
+      "id": 22
+    },
+    {
+      "name": "sdgf",
+      "color": "sdgf",
+      "price": "dsg",
+      "id": 23
+    },
+    {
+      "name": "sdfgds",
+      "color": "dsg",
+      "price": "sdf",
+      "id": 24
+    },
+    {
+      "name": "sdfgds",
+      "color": "dsg",
+      "price": "sdf1234",
+      "id": 25
+    },
+    {
+      "name": "xvxv",
+      "color": "xzvx",
+      "price": "111111111",
+      "id": 26
+    },
+    {
+      "name": "sdfsd",
+      "color": "sdds",
+      "price": "000",
+      "id": 27
+    },
+    {
+      "name": "sdf",
+      "color": "dsfds",
+      "price": "9999",
+      "id": 28
+    },
+    {
+      "name": "sdfgdsg",
+      "color": "sdgsdg",
+      "price": "12345678",
+      "id": 29
+    },
+    {
+      "name": "Sasha",
+      "color": "Black",
+      "price": "110",
+      "id": 30
+    },
+    {
+      "name": "sf",
+      "color": "sdf",
+      "price": "12",
+      "id": 31
     }
   ],
   "users": [
