@@ -8,6 +8,7 @@ export class AuthService {
 
     logOut(){
         this.isLoggedIn = false;
+        window.localStorage.clear();
     }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { PostService } from '../service/post.service';
 import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/forms';
+import { PostService } from '../../service/post.service';
 @Component({
   selector: 'app-dialog-overview-example-dialog',
   templateUrl: './dialog-overview-example-dialog.component.html',

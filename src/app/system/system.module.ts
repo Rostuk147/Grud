@@ -5,12 +5,12 @@ import { MatToolbarModule, MatInputModule, MatButtonModule, MatDialogModule, Mat
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchPipe } from '../search.pipe';
-import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { PostService } from '../service/post.service';
 import { SystemRoutingModule } from './system-routing.module';
 import { PaginationComponent } from './pagination/pagination.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 
 @NgModule({
   imports: [
@@ -24,7 +24,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatDialogModule,
     MatSelectModule,
     SystemRoutingModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCheckboxModule
   ],
   declarations: [
     SystemComponent,

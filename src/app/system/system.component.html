@@ -42,8 +42,8 @@
                               <button [disabled]="form.invalid" type="submit" mat-raised-button color="primary">Add New Post</button>
                           </form>
                     </div>
-                    
-                    <div *ngFor="let post of posts | search:searchName" >
+
+                    <div *ngFor="let post of posts " >
                         <div class="row wrapper">
                             <div class="col-md-2">
                                 <span>Name:</span>
@@ -57,11 +57,11 @@
                                 <span>Price:</span>
                                 {{post.price}}
                             </div>
-                            <div class=" col-md-2 offset-md-2">
-                                <button (click)="deletePost(post)" mat-raised-button color="warn">Delete</button>
+                            <div class=" col-md-2 offset-md-1">
+                                <button mat-raised-button  (click)="openDialog(post)" color="accent">Edit</button>
                             </div>
                             <div class="col-md-2">
-                                <button mat-raised-button  (click)="openDialog(post)" color="accent">Edit</button>
+                                <button  (click)="deletePost(post)" mat-raised-button color="warn">Delete</button>
                             </div>
                         </div>
                     </div>

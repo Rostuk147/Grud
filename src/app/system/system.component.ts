@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { PostService } from '../service/post.service';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
-import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { Post } from '../models/post.model';
+import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 
 
 @Component({
@@ -39,7 +39,6 @@ export class SystemComponent implements OnInit {
     });
   }
 
-
   fnGetPosts() {
     this.service.getPost()
     .subscribe(( post: Post[]) => {
@@ -71,6 +70,7 @@ export class SystemComponent implements OnInit {
       this.posts = this.posts.filter(c => c.id !== post.id);
     });
   }
+
 
   searchFilter = [
     {value: 'Price', viewValue: 'Price'},

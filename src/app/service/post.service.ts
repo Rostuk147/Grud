@@ -19,7 +19,7 @@ export class PostService {
         return this.http.post('http://localhost:3000/posts', data);
     }
 
-    deletePost(post: any){
+    deletePost(post){
         return this.http.delete(`http://localhost:3000/posts/${post.id}`);
     }
 

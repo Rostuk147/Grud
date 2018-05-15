@@ -1,0 +1,9 @@
+span.date{
+    margin-left: 25px;
+    display: inline-block;
+}
+.right{
+    text-align: right;
+    display: block;
+    width: 100%;
+}

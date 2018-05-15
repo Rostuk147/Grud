@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user.model';
+import { AuthService } from '../../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  date: Date = new Date();
+  userName: string = '';
+  constructor(
+    private auth: AuthService,
+    private route: Router
+  ) { }
 
   ngOnInit() {
+    this.userName = JSON.parse(window.localStorage.getItem('user'));
+  }
+
+  onLogout() {
+    this.auth.logOut();
+    this.route.navigate(['/login']);
   }
 
 }
