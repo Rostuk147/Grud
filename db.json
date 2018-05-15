@@ -1,12 +1,6 @@
 {
   "posts": [
     {
-      "name": "віаef",
-      "color": "аsf",
-      "price": "25",
-      "id": 9
-    },
-    {
       "name": "віаіа",
       "color": "аа",
       "price": "22",
@@ -115,6 +109,20 @@
       "password": "testtest@gmail.com",
       "gender": "Female",
       "id": 12
+    },
+    {
+      "name": "cdsdscsd",
+      "email": "vdcdfv@ru",
+      "password": "sfdsgfds12",
+      "gender": "Male",
+      "id": 13
+    },
+    {
+      "name": "Demsky",
+      "email": "demsky@gmail.com",
+      "password": "Oleg123",
+      "gender": "Male",
+      "id": 14
     }
   ]
 }

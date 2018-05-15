@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { PostService } from '../../service/post.service';
 import { User } from '../../models/user.model';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private service: PostService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private auth: AuthService
   ) { }
 
   ngOnInit() {
@@ -61,6 +63,7 @@ export class LoginComponent implements OnInit {
       arr.forEach(element => {
         if( element.email === email ){
           if(element.password === password){
+            this.auth.login();
             this.router.navigate(['/system'])
           } else{
             alert('Email or Password not correct')

@@ -10,6 +10,10 @@ import { MatInputModule, MatSelectModule, MatButtonModule, MatIconModule } from 
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PostService } from '../service/post.service';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -27,6 +31,6 @@ import { PostService } from '../service/post.service';
      RegistrationComponent,
      AuthComponent
   ],
-  providers: [PostService]
+  providers: [PostService, AuthService, AuthGuard]
 })
 export class AuthModule { }
