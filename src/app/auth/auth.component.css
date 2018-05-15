@@ -1,5 +1,5 @@
 .auth-wrapper{
-    background: #9faaea;
+    background: #647382;
     height: 100vh;
 }
 .wrapp-component {
@@ -13,4 +13,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.form-wrapp{
+    background-color: #fff;
+    width: 400px;
+    padding: 25px;
+    border-radius: 5px; 
 }

@@ -1,9 +1,6 @@
 form mat-form-field{
     display: block;
 }
-form {
-    margin-bottom: 50px;
-}
 .can-login{
     color: #fff;
     font-size: 20px;

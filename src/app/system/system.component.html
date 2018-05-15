@@ -34,7 +34,7 @@
                               </mat-form-field>
 
                               <mat-form-field class="example-full-width">
-                                <input  matInput placeholder="Price"  formControlName = "price">
+                                <input  type="number" matInput placeholder="Price"  formControlName = "price">
                                 <mat-error *ngIf="form.get('price').invalid && form.get('price').touched">
                                     Price is <strong>required</strong>
                                   </mat-error>
@@ -67,7 +67,7 @@
                     </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row paginagination">
         <div class="col-md-12">
             <app-pagination [post] = "post"></app-pagination>
         </div>

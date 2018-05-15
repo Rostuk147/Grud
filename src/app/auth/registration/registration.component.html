@@ -23,4 +23,5 @@
       <mat-error *ngIf="form.get('select').invalid && form.get('select').touched">{{getErrorMessageSelect()}}</mat-error>
     </mat-form-field>
     <button mat-raised-button color="accent" type="submit" [disabled]="form.invalid">Regestration</button>
+    <a [routerLink]="'/login'" mat-raised-button color="primary">Back to Login</a>
   </form>

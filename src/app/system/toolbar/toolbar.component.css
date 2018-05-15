@@ -1,9 +1,24 @@
 span.date{
     margin-left: 25px;
     display: inline-block;
+    font-size: 15px;
 }
 .right{
     text-align: right;
     display: block;
     width: 100%;
+    font-size: 14px;
+}
+.logOut{
+    display: inline-block;
+    margin: 0 15px;
+    cursor: pointer;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+}
+.logOut:hover{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }

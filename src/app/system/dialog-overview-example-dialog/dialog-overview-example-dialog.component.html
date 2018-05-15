@@ -9,7 +9,7 @@
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Price"  formControlName="price" value="{{data.price}}">
+            <input type="number" matInput placeholder="Price"  formControlName="price" value="{{data.price}}">
         </mat-form-field>
 
         <button [disabled]="form.invalid" mat-raised-button color="primary" (click) = 'Edit()'>Ok</button>
