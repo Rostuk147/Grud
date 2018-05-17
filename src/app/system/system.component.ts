@@ -19,8 +19,6 @@ export class SystemComponent implements OnInit {
   selected = '';
   canDelete:boolean = false;
 
-
-
   constructor(
     public dialog: MatDialog,
     private service: PostService

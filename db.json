@@ -39,6 +39,13 @@
       "password": "qwedsa123",
       "gender": "Male",
       "id": 2
+    },
+    {
+      "name": "VOva",
+      "email": "lola@mail.com",
+      "password": "testPass",
+      "gender": "Male",
+      "id": 3
     }
   ]
 }

@@ -11,7 +11,6 @@ export class BaseApi {
         return this.baseUrl + url;
     }
 
-
     public get(url: string = '') {
         return this.http.get(this.getUrl(url));
     } 
@@ -27,8 +26,5 @@ export class BaseApi {
     public put(url: string = '', data: any = {}) {
         return this.http.put(this.getUrl(url), data);
     } 
-
-    
-
 
 }
