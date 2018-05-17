@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class RegistrationComponent implements OnInit {
 
   form: FormGroup;
+  value: any;
   constructor(
     private service: PostService,
     private router: Router
@@ -25,6 +26,7 @@ export class RegistrationComponent implements OnInit {
       'password': new FormControl(null, [Validators.required, Validators.minLength(6)]),
       'select': new FormControl(null, [Validators.required])
     })
+    
   }
 
   getErrorMessageName() {
@@ -50,10 +52,26 @@ export class RegistrationComponent implements OnInit {
         '';
   }
 
+
+  // emailValidator(control: FormControl): Promise<any>{
+  //   return new Promise((resolve, reject) => {
+  //     this.service.getUserByEmail(control.value)
+  //     .subscribe((user: User) =>{
+  //       if(user){
+  //         resolve({emailrepeat: true})
+  //         console.log(user)
+  //       } else{
+  //         resolve(null)
+  //       }
+  //     })
+  //   })
+  // }
+
+
+
   onSubmit() {
     const {name, email, password, select} = this.form.value;
     const user = new User(name, email, password, select);
-
     this.service.createNewUser(user)
     .subscribe((user: User) => {
       this.router.navigate(['/login'], {

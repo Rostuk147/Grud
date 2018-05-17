@@ -16,7 +16,10 @@ export class SystemComponent implements OnInit {
   form: FormGroup;
   posts: Post[];
   searchName = '';
-  selected = ''
+  selected = '';
+  canDelete:boolean = false;
+
+
 
   constructor(
     public dialog: MatDialog,
@@ -69,6 +72,10 @@ export class SystemComponent implements OnInit {
     .subscribe((data) => {
       this.posts = this.posts.filter(c => c.id !== post.id);
     });
+  }
+
+  canDeleteM(){
+    this.canDelete = !this.canDelete;    
   }
 
 

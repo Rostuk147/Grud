@@ -1,8 +1,10 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../models/user.model';
+import 'rxjs/add/operator/map';
 
 @Injectable()
+
 export class PostService {
     constructor(private http: HttpClient){}
 
@@ -32,9 +34,8 @@ export class PostService {
     }
 
     getUserByEmail(email){
-        return this.http.get('http://localhost:3000/users');
+        return this.http.get(`http://localhost:3000/users?email=${email}`)
+        .map((user) => user[0] ? user[0] : undefined);
     }
     
-   
-
 }

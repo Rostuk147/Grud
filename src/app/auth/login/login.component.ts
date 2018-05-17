@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   hide = true;
   canLogin = false;
+  signIn = false;
 
   constructor(
     private service: PostService,
@@ -55,22 +56,21 @@ export class LoginComponent implements OnInit {
     const formValue = this.form.value;
     this.service.getUserByEmail(formValue.email)
     .subscribe((user: User) =>{
-      let arr = []
-      for(let key in user){
-       arr.push(user[key])
-      }
-      arr.forEach(element => {
-        if( element.email === formValue.email ){
-          if(element.password === formValue.password){
-            const userName = element.name;
-            window.localStorage.setItem('user', JSON.stringify(userName));
-            this.auth.login();
-            this.router.navigate(['/system'])
-          } else{
-            alert('Email or Password not correct')
-          }
+      if(user){
+        if(formValue.password === user.password){
+          const userName = user.name;
+          window.localStorage.setItem('user', JSON.stringify(userName));
+          this.auth.login();
+          this.router.navigate(['/system'])
+        } else{
+          this.signIn = true;
         }
-      });
+      } else {
+        this.signIn = true;
+      }
+      window.setTimeout(() =>{
+        this.signIn = false
+      }, 3000)
     })
   }
 }

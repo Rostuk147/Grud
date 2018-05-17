@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SearchPipe implements PipeTransform {
 
   transform(posts, value: string) {
-    if (posts.length === 0 || value === '' ) {
+    if (!posts || value === '' ) {
       return posts;
     }
       return posts.filter(post => {

@@ -12,6 +12,7 @@ export class ToolbarComponent implements OnInit {
 
   date: Date = new Date();
   userName: string = '';
+
   constructor(
     private auth: AuthService,
     private route: Router

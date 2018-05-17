@@ -1,24 +1,6 @@
 {
   "posts": [
     {
-      "name": "Test1sdf",
-      "color": "cdsdscsd1214",
-      "price": "154",
-      "id": 15
-    },
-    {
-      "name": "sdgsdg",
-      "color": "ba4",
-      "price": "124",
-      "id": 16
-    },
-    {
-      "name": "sdgd3",
-      "color": "dfg",
-      "price": "12422",
-      "id": 17
-    },
-    {
       "name": "sdgd3",
       "color": "dfg",
       "price": "12422",
@@ -43,40 +25,16 @@
       "id": 21
     },
     {
-      "name": "dsfsdg",
-      "color": "sdg",
-      "price": "1",
+      "name": "Aaaa",
+      "color": "Aaa",
+      "price": 12345,
       "id": 22
-    },
-    {
-      "name": "sdgf",
-      "color": "sdgf",
-      "price": "dsg",
-      "id": 23
-    },
-    {
-      "name": "sdfgds",
-      "color": "dsg",
-      "price": "sdf",
-      "id": 24
-    },
-    {
-      "name": "sdfgds",
-      "color": "dsg",
-      "price": "sdf1234",
-      "id": 25
     },
     {
       "name": "xvxv",
       "color": "xzvx",
       "price": "111111111",
       "id": 26
-    },
-    {
-      "name": "sdfsd",
-      "color": "sdds",
-      "price": "000",
-      "id": 27
     },
     {
       "name": "sdf",
@@ -107,6 +65,18 @@
       "color": "fdsf",
       "price": 213,
       "id": 32
+    },
+    {
+      "name": "test",
+      "color": "blacl",
+      "price": 12,
+      "id": 33
+    },
+    {
+      "name": "test",
+      "color": "blacl",
+      "price": 12,
+      "id": 34
     }
   ],
   "users": [
@@ -116,13 +86,6 @@
       "password": "123qwesfds",
       "select": "Male",
       "id": 1
-    },
-    {
-      "name": "ewfewe",
-      "email": "gavrk.r@yandex.ru",
-      "password": "sdvdv21f",
-      "gender": "Male",
-      "id": 2
     },
     {
       "name": "ewffsdfvewe",
@@ -207,6 +170,36 @@
       "password": "Oleg123",
       "gender": "Male",
       "id": 14
+    },
+    {
+      "name": "Oleg",
+      "email": "oleg@gmail.ru",
+      "password": "oleg123",
+      "gender": "Male",
+      "id": 15
+    },
+    {
+      "name": "sdggsdg",
+      "email": "gavrk.r@yandex.rudddd",
+      "password": "testtest@gmail.com",
+      "gender": "Male",
+      "id": 16
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "image": null,
+      "id": 17
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "gender": null,
+      "image": null,
+      "id": 18
     }
   ]
 }
