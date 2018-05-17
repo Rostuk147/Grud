@@ -1,82 +1,28 @@
 {
   "posts": [
     {
-      "name": "sdgd3",
-      "color": "dfg",
-      "price": "12422",
+      "name": "Test",
+      "color": "black",
+      "price": "124",
       "id": 18
     },
     {
-      "name": "sdgd3sdg",
-      "color": "dfgsdg",
-      "price": "124223",
+      "name": "Product",
+      "color": "white",
+      "price": "23",
       "id": 19
     },
     {
-      "name": "sdgd3sdg123",
-      "color": "dfgsdgfd",
-      "price": "124223334",
+      "name": "Product2",
+      "color": "dark",
+      "price": "123",
       "id": 20
     },
     {
-      "name": "dsv23",
-      "color": "dg",
-      "price": "1244",
-      "id": 21
-    },
-    {
-      "name": "Aaaa",
-      "color": "Aaa",
-      "price": 12345,
-      "id": 22
-    },
-    {
-      "name": "xvxv",
-      "color": "xzvx",
-      "price": "111111111",
-      "id": 26
-    },
-    {
-      "name": "sdf",
-      "color": "dsfds",
-      "price": "9999",
-      "id": 28
-    },
-    {
-      "name": "sdfgdsg",
-      "color": "sdgsdg",
+      "name": "Apple",
+      "color": "black",
       "price": "12345678",
       "id": 29
-    },
-    {
-      "name": "Sasha",
-      "color": "Black",
-      "price": "110",
-      "id": 30
-    },
-    {
-      "name": "sf",
-      "color": "sdf",
-      "price": "12",
-      "id": 31
-    },
-    {
-      "name": "sdf",
-      "color": "fdsf",
-      "price": 213,
-      "id": 32
-    },
-    {
-      "name": "test",
-      "color": "blacl",
-      "price": 12,
-      "id": 33
-    },
-    {
-      "name": "test",
-      "color": "blacl",
-      "price": 12,
-      "id": 34
     }
   ],
   "users": [
@@ -88,118 +34,11 @@
       "id": 1
     },
     {
-      "name": "ewffsdfvewe",
-      "email": "gavrk.r@yandex.ua",
-      "password": "sdvdsdfdsv21f",
-      "gender": "Male",
-      "id": 3
-    },
-    {
-      "name": "Rostuk",
+      "name": "Rosuk",
       "email": "gavrk.r@yandex.ru",
-      "password": "Lusyn1998",
+      "password": "qwedsa123",
       "gender": "Male",
-      "id": 4
-    },
-    {
-      "name": "Lana",
-      "email": "roksa14@yandex.ru",
-      "password": "roksa12",
-      "gender": "Female",
-      "id": 5
-    },
-    {
-      "name": "sdgd",
-      "email": "vdcdfv@ru",
-      "password": "sdgdsgsdg",
-      "gender": "Male",
-      "id": 6
-    },
-    {
-      "name": "sdgsdv2",
-      "email": "sdgdsgds@ru",
-      "password": "dsgdv3",
-      "gender": "Male",
-      "id": 7
-    },
-    {
-      "name": "wegferf2",
-      "email": "roksa14@yandex.ru",
-      "password": "sdgfsdg3",
-      "gender": "Male",
-      "id": 8
-    },
-    {
-      "name": "dgvdv",
-      "email": "vdcdfv@ru",
-      "password": "vdfvbgd32",
-      "gender": "Male",
-      "id": 9
-    },
-    {
-      "name": "sdgdg",
-      "email": "vdcdfv@ru",
-      "password": "db23csdv",
-      "gender": "Male",
-      "id": 10
-    },
-    {
-      "name": "sdfvd1",
-      "email": "vdcdfv@ru",
-      "password": "dscdsfd324",
-      "gender": "Female",
-      "id": 11
-    },
-    {
-      "name": "cdsdscsd1",
-      "email": "vdcdfv@ru",
-      "password": "testtest@gmail.com",
-      "gender": "Female",
-      "id": 12
-    },
-    {
-      "name": "cdsdscsd",
-      "email": "vdcdfv@ru",
-      "password": "sfdsgfds12",
-      "gender": "Male",
-      "id": 13
-    },
-    {
-      "name": "Demsky",
-      "email": "demsky@gmail.com",
-      "password": "Oleg123",
-      "gender": "Male",
-      "id": 14
-    },
-    {
-      "name": "Oleg",
-      "email": "oleg@gmail.ru",
-      "password": "oleg123",
-      "gender": "Male",
-      "id": 15
-    },
-    {
-      "name": "sdggsdg",
-      "email": "gavrk.r@yandex.rudddd",
-      "password": "testtest@gmail.com",
-      "gender": "Male",
-      "id": 16
-    },
-    {
-      "name": null,
-      "email": null,
-      "password": null,
-      "gender": null,
-      "image": null,
-      "id": 17
-    },
-    {
-      "name": null,
-      "email": null,
-      "password": null,
-      "gender": null,
-      "image": null,
-      "id": 18
+      "id": 2
     }
   ]
 }

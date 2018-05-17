@@ -61,8 +61,8 @@ export class SystemComponent implements OnInit {
 
   onSubmit(){
     const formValue = this.form.value;
-    this.service.addPost(formValue.name, formValue.color, formValue.price)
-    .subscribe((post: Post) => {
+    this.service.addPost(formValue)
+    .subscribe((post: any) => {
       this.posts.push(post);
     });
   }
