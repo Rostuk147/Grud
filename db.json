@@ -34,18 +34,25 @@
       "id": 1
     },
     {
-      "name": "Rosuk",
-      "email": "gavrk.r@yandex.ru",
-      "password": "qwedsa123",
-      "gender": "Male",
-      "id": 2
-    },
-    {
       "name": "VOva",
       "email": "lola@mail.com",
       "password": "testPass",
       "gender": "Male",
       "id": 3
+    },
+    {
+      "name": "Rostuk",
+      "email": "gavrk.r@yandex.ru",
+      "password": "Lusyn1998",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "name": "Rostuk",
+      "email": "test.r@yandex.ru",
+      "password": "qwedsa",
+      "gender": "Male",
+      "id": 5
     }
   ]
 }

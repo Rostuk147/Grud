@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
+  password;
   form: FormGroup;
   value: any;
   constructor(
@@ -24,6 +24,7 @@ export class RegistrationComponent implements OnInit {
       'name': new FormControl(null, [Validators.required, Validators.maxLength(10)]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(6)]),
+      'repeatPassword': new FormControl(null, [Validators.required, this.passwordConfirmValidator.bind(this)]),
       'select': new FormControl(null, [Validators.required]),
       'checkbox': new FormControl(null, [Validators.requiredTrue])
     })
@@ -46,10 +47,27 @@ export class RegistrationComponent implements OnInit {
         this.form.get('password')['errors']['minlength'] ? `Password must be more then ${this.form.get('password')['errors']['minlength']['requiredLength']} symbol.  Now we Have ${this.form.get('password')['errors']['minlength']['actualLength']} symbol` :
         '';
   }
+
+  getErrorMessagePasswordConfirm() {
+    return this.form.get('repeatPassword')['errors']['required'] ? 'Password Required' :
+        this.form.get('repeatPassword')['errors']['passwordConfirm'] ? 'Password does not match the confirm password' :
+        '';
+  }
   
   getErrorMessageSelect() {
     return this.form.get('select')['errors']['required'] ? 'select Required' :
         '';
+  }
+
+
+  passwordConfirmValidator(control: FormControl){
+    let password = this.password;
+    if(control.value === password){
+      console.log(' confirm')
+      return null;
+    } 
+      console.log('not confirm')
+      return {"passwordConfirm": true};
   }
 
 

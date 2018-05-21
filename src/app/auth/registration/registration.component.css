@@ -11,3 +11,9 @@ mat-icon{
     display: inline-block;
     margin-left: 15px;
 }
+.agree-wrapp span{
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-left: 40px;
+}
