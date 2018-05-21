@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../../models/user.model';
 import { PostService } from '../../service/post.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -16,8 +17,11 @@ export class RegistrationComponent implements OnInit {
   value: any;
   constructor(
     private service: PostService,
-    private router: Router
-  ) { }
+    private router: Router,
+    private title: Title
+  ) { 
+    title.setTitle('Registration');
+  }
 
   ngOnInit() {
     this.form = new FormGroup({

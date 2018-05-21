@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { PostService } from '../../service/post.service';
 import { User } from '../../models/user.model';
 import { AuthService } from '../auth.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login',
@@ -20,8 +21,11 @@ export class LoginComponent implements OnInit {
     private service: PostService,
     private router: Router,
     private route: ActivatedRoute,
-    private auth: AuthService
-  ) { }
+    private auth: AuthService,
+    private title: Title
+  ) { 
+    title.setTitle('Login');
+  }
 
   ngOnInit() {
     this.route.queryParams

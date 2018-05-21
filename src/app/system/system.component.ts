@@ -4,6 +4,7 @@ import { PostService } from '../service/post.service';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { Post } from '../models/post.model';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+import { Title } from '@angular/platform-browser';
 
 
 @Component({
@@ -20,8 +21,11 @@ export class SystemComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    private service: PostService
-  ) { }
+    private service: PostService,
+    private title: Title
+  ) { 
+    title.setTitle('System');
+  }
 
 
   openDialog(post): void {
