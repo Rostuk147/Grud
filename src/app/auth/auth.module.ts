@@ -23,7 +23,8 @@ import { AuthGuard } from './auth-guard.service';
     FormsModule,
     MatButtonModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatCheckboxModule
   ],
   declarations: [
      LoginComponent,

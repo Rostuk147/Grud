@@ -23,6 +23,11 @@
       <mat-error *ngIf="form.get('select').invalid && form.get('select').touched">{{getErrorMessageSelect()}}</mat-error>
     </mat-form-field>
 
+    <div class="agree-wrapp">
+      <mat-checkbox formControlName="checkbox"></mat-checkbox>
+      <a href="https://www.google.com.ua/" target="_blank">I agree to the Terms and Condition</a>
+    </div>
+      
     <button mat-raised-button color="accent" type="submit" [disabled]="form.invalid">Regestration</button>
     <a [routerLink]="'/login'" mat-raised-button color="primary">Back to Login</a>
   </form>

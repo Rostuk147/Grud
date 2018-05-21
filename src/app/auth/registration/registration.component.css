@@ -4,3 +4,10 @@ form mat-form-field{
 mat-icon{
     cursor: pointer;
 }
+.agree-wrapp{
+    margin: 15px 0;
+}
+.agree-wrapp a{
+    display: inline-block;
+    margin-left: 15px;
+}

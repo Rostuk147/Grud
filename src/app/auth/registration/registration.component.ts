@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../../models/user.model';
 import { PostService } from '../../service/post.service';
@@ -24,9 +24,9 @@ export class RegistrationComponent implements OnInit {
       'name': new FormControl(null, [Validators.required, Validators.maxLength(10)]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(6)]),
-      'select': new FormControl(null, [Validators.required])
+      'select': new FormControl(null, [Validators.required]),
+      'checkbox': new FormControl(null, [Validators.requiredTrue])
     })
-    
   }
 
   getErrorMessageName() {
@@ -53,20 +53,19 @@ export class RegistrationComponent implements OnInit {
   }
 
 
-  // emailValidator(control: FormControl): Promise<any>{
-  //   return new Promise((resolve, reject) => {
-  //     this.service.getUserByEmail(control.value)
-  //     .subscribe((user: User) =>{
-  //       if(user){
-  //         resolve({emailrepeat: true})
-  //         console.log(user)
-  //       } else{
-  //         resolve(null)
-  //       }
-  //     })
-  //   })
-  // }
-
+  emailValidator(control: FormControl): Promise<any>{
+    return new Promise((resolve, reject) => {
+      this.service.getUserByEmail(control.value)
+      .subscribe((user: User) =>{
+        if(user){
+          resolve({emailrepeat: true})
+          console.log(user)
+        } else{
+          resolve(null)
+        }
+      })
+    })
+  }
 
 
   onSubmit() {
