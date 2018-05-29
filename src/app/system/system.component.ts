@@ -7,6 +7,7 @@ import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-
 import { Title } from '@angular/platform-browser';
 
 
+
 @Component({
   selector: 'app-system',
   templateUrl: './system.component.html',
@@ -15,9 +16,10 @@ import { Title } from '@angular/platform-browser';
 
 export class SystemComponent implements OnInit {
   form: FormGroup;
-  posts: Post[];
+  posts: Post[] ;
   searchName = '';
   selected = '';
+  page: number = 1;
 
   constructor(
     public dialog: MatDialog,
@@ -99,4 +101,5 @@ export class SystemComponent implements OnInit {
     }
   }
 
+ 
 }

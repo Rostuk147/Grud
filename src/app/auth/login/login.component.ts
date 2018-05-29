@@ -13,7 +13,6 @@ import { Title } from '@angular/platform-browser';
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  hide = true;
   canLogin = false;
   signIn = false;
 

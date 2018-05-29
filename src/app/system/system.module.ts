@@ -9,6 +9,9 @@ import { PostService } from '../service/post.service';
 import { SystemRoutingModule } from './system-routing.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+
+
 
 @NgModule({
   imports: [
@@ -21,7 +24,8 @@ import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-
     ReactiveFormsModule,
     MatDialogModule,
     MatSelectModule,
-    SystemRoutingModule
+    SystemRoutingModule,
+    NgxPaginationModule
   ],
   declarations: [
     SystemComponent,

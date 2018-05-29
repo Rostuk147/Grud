@@ -23,6 +23,84 @@
       "color": "black",
       "price": "12345678",
       "id": 29
+    },
+    {
+      "name": "Test",
+      "color": "black",
+      "price": "124",
+      "id": 18
+    },
+    {
+      "name": "Product",
+      "color": "white",
+      "price": "23",
+      "id": 19
+    },
+    {
+      "name": "Product2",
+      "color": "dark",
+      "price": "123",
+      "id": 20
+    },
+    {
+      "name": "Apple",
+      "color": "black",
+      "price": "12345678",
+      "id": 29
+    },
+    {
+      "name": "Test",
+      "color": "black",
+      "price": "124",
+      "id": 18
+    },
+    {
+      "name": "Product",
+      "color": "white",
+      "price": "23",
+      "id": 19
+    },
+    {
+      "name": "Product2",
+      "color": "dark",
+      "price": "123",
+      "id": 20
+    },
+    {
+      "name": "Apple",
+      "color": "black",
+      "price": "12345678",
+      "id": 29
+    },
+    {
+      "name": "Test",
+      "color": "black",
+      "price": "124",
+      "id": 18
+    },
+    {
+      "name": "Product",
+      "color": "white",
+      "price": "23",
+      "id": 19
+    },
+    {
+      "name": "Product2",
+      "color": "dark",
+      "price": "123",
+      "id": 20
+    },
+    {
+      "name": "Apple",
+      "color": "black",
+      "price": "12345678",
+      "id": 29
+    },
+    {
+      "name": "sf",
+      "color": "sdf",
+      "price": 2,
+      "id": 30
     }
   ],
   "users": [
@@ -53,6 +131,13 @@
       "password": "qwedsa",
       "gender": "Male",
       "id": 5
+    },
+    {
+      "name": "Test",
+      "email": "Test@mail.ru",
+      "password": "Test123",
+      "gender": "Male",
+      "id": 6
     }
   ]
 }
