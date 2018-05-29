@@ -10,7 +10,7 @@ import { SystemRoutingModule } from './system-routing.module';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import {NgxPaginationModule} from 'ngx-pagination';
-
+import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
 
 
 @NgModule({
@@ -31,11 +31,13 @@ import {NgxPaginationModule} from 'ngx-pagination';
     SystemComponent,
     ToolbarComponent,
     DialogOverviewExampleDialogComponent,
-    SearchPipe
+    SearchPipe,
+    DialogDeleteComponent
   ],
   entryComponents: [
     ToolbarComponent,
-    DialogOverviewExampleDialogComponent
+    DialogOverviewExampleDialogComponent,
+    DialogDeleteComponent
   ],
   providers: [PostService]
 })

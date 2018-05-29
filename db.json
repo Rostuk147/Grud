@@ -1,84 +1,6 @@
 {
   "posts": [
     {
-      "name": "Test",
-      "color": "black",
-      "price": "124",
-      "id": 18
-    },
-    {
-      "name": "Product",
-      "color": "white",
-      "price": "23",
-      "id": 19
-    },
-    {
-      "name": "Product2",
-      "color": "dark",
-      "price": "123",
-      "id": 20
-    },
-    {
-      "name": "Apple",
-      "color": "black",
-      "price": "12345678",
-      "id": 29
-    },
-    {
-      "name": "Test",
-      "color": "black",
-      "price": "124",
-      "id": 18
-    },
-    {
-      "name": "Product",
-      "color": "white",
-      "price": "23",
-      "id": 19
-    },
-    {
-      "name": "Product2",
-      "color": "dark",
-      "price": "123",
-      "id": 20
-    },
-    {
-      "name": "Apple",
-      "color": "black",
-      "price": "12345678",
-      "id": 29
-    },
-    {
-      "name": "Test",
-      "color": "black",
-      "price": "124",
-      "id": 18
-    },
-    {
-      "name": "Product",
-      "color": "white",
-      "price": "23",
-      "id": 19
-    },
-    {
-      "name": "Product2",
-      "color": "dark",
-      "price": "123",
-      "id": 20
-    },
-    {
-      "name": "Apple",
-      "color": "black",
-      "price": "12345678",
-      "id": 29
-    },
-    {
-      "name": "Test",
-      "color": "black",
-      "price": "124",
-      "id": 18
-    },
-    {
       "name": "Product",
       "color": "white",
       "price": "23",
@@ -101,6 +23,48 @@
       "color": "sdf",
       "price": 2,
       "id": 30
+    },
+    {
+      "name": "MyProduct",
+      "color": "yellow",
+      "price": 1,
+      "id": 31
+    },
+    {
+      "name": "Pineapple",
+      "color": "white",
+      "price": 10,
+      "id": 32
+    },
+    {
+      "name": "SomeProduct1",
+      "color": "white",
+      "price": 101,
+      "id": 33
+    },
+    {
+      "name": "SomeProduct2",
+      "color": "orange",
+      "price": 4,
+      "id": 34
+    },
+    {
+      "name": "SomeProduct3",
+      "color": "blue",
+      "price": 44,
+      "id": 35
+    },
+    {
+      "name": "SomeProduct4",
+      "color": "black",
+      "price": 441,
+      "id": 36
+    },
+    {
+      "name": "tesr1",
+      "color": "dark",
+      "price": 88,
+      "id": 37
     }
   ],
   "users": [

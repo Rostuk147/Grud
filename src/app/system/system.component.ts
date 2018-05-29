@@ -5,6 +5,7 @@ import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { Post } from '../models/post.model';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { Title } from '@angular/platform-browser';
+import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
 
 
 
@@ -29,7 +30,6 @@ export class SystemComponent implements OnInit {
     title.setTitle('System');
   }
 
-
   openDialog(post): void {
     let dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
       width: '550px',
@@ -38,6 +38,22 @@ export class SystemComponent implements OnInit {
         color: post.color,
         price: post.price,
         id: post.id
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.fnGetPosts();
+    });
+  }
+
+  openDialogDelete(post, posts): void{
+    let dialogRef = this.dialog.open(DialogDeleteComponent, {
+      width: '550px',
+      data: { 
+        name: post.name,
+        color: post.color,
+        price: post.price,
+        id: post.id,
+        posts: posts
       }
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -70,14 +86,6 @@ export class SystemComponent implements OnInit {
     });
   }
 
-  deletePost(post: Post){
-    this.service.deletePost(post)
-    .subscribe((data) => {
-      this.posts = this.posts.filter(c => c.id !== post.id);
-    });
-  }
-
-
   searchFilter = [
     {value: 'Price', viewValue: 'Price'},
     {value: 'Name', viewValue: 'Name'}
@@ -101,5 +109,6 @@ export class SystemComponent implements OnInit {
     }
   }
 
+ 
  
 }
