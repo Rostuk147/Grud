@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user.model';
-import { AuthService } from '../../auth/auth.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../auth/auth.service';
 
 @Component({
-  selector: 'app-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.css']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
-export class ToolbarComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   date: Date = new Date();
-  userName: string = '';
+  userName = '';
 
   constructor(
     private auth: AuthService,
@@ -20,10 +19,12 @@ export class ToolbarComponent implements OnInit {
 
   ngOnInit() {
     this.userName = JSON.parse(window.localStorage.getItem('user'));
+    console.log(this.userName.length);
   }
 
   onLogout() {
     this.auth.logOut();
+    this.userName = null;
     this.route.navigate(['/login']);
   }
 

@@ -3,7 +3,7 @@
     <span>CRUD</span>
     <span class="date">{{date | date:'dd.MM.yyyy'}}</span>
     <div class="right">
-      <span class="name">
+      <span class="name" *ngIf="userName != null">
         Welcome: {{userName}}
       </span>
       <div class="logOut" (click)="onLogout()">

@@ -11,6 +11,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { PostService } from '../service/post.service';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AuthGuard } from './auth-guard.service';
     MatButtonModule,
     MatIconModule,
     BrowserAnimationsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    SharedModule
   ],
   declarations: [
      LoginComponent,

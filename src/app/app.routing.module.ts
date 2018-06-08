@@ -1,21 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
-import { SystemModule } from './system/system.module';
-import { AuthGuard } from './auth/auth-guard.service';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { HomeComponent } from './home/home.component';
+import { SystemComponent } from './system/system.component';
 
 const routes: Routes = [
-  {path: '', component: AuthComponent},
-  {path: 'system', loadChildren: './system/system.module#SystemModule'},
+  {path: '', component: HomeComponent},
+  {path: 'auth', component: AuthComponent},
+  {path: 'system', component: SystemComponent},
   {path: '**', component: NotfoundComponent}
-]
+];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {
-      preloadingStrategy: PreloadAllModules
-    })
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })

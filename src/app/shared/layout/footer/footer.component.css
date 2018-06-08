@@ -1,0 +1,12 @@
+.mat-toolbar.mat-primary{
+    padding: 25px 0;;
+}
+a{
+    color: #fff;
+}
+li.active a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+li{display: block;}
+ul{margin-bottom: 0;}

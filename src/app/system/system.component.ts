@@ -7,8 +7,6 @@ import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-
 import { Title } from '@angular/platform-browser';
 import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
 
-
-
 @Component({
   selector: 'app-system',
   templateUrl: './system.component.html',
@@ -26,7 +24,7 @@ export class SystemComponent implements OnInit {
     public dialog: MatDialog,
     private service: PostService,
     private title: Title
-  ) { 
+  ) {
     title.setTitle('System');
   }
 
@@ -65,7 +63,7 @@ export class SystemComponent implements OnInit {
     this.service.getPost()
     .subscribe(( post: Post[]) => {
       this.posts = post;
-    })
+    });
   }
   
   ngOnInit() {
@@ -75,7 +73,7 @@ export class SystemComponent implements OnInit {
       'name': new FormControl(null, [Validators.required]),
       'color': new FormControl(null, [Validators.required]),
       'price': new FormControl(null, [Validators.required])
-    })
+    });
   }
 
   onSubmit(){
@@ -86,6 +84,7 @@ export class SystemComponent implements OnInit {
     });
   }
 
+
   searchFilter = [
     {value: 'Price', viewValue: 'Price'},
     {value: 'Name', viewValue: 'Name'}
@@ -95,9 +94,9 @@ export class SystemComponent implements OnInit {
     return itemA.price - itemB.price;
   }
 
-  nameFilter(a,b){
-    if(a.name < b.name) return -1;
-    if(a.name > b.name) return 1;
+  nameFilter(a, b) {
+    if (a.name < b.name) { return -1; }
+    if (a.name > b.name) { return 1; }
     return 0;
   }
 
@@ -108,7 +107,4 @@ export class SystemComponent implements OnInit {
        this.posts.sort(this.nameFilter);
     }
   }
-
- 
- 
 }

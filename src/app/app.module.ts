@@ -4,14 +4,17 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModel, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing.module';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { HomeModule } from './home/home.module';
+import { SystemModule } from './system/system.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,10 @@ import { NotfoundComponent } from './notfound/notfound.component';
     FormsModule,
     ReactiveFormsModule,
     AuthModule,
-    AppRoutingModule
+    HomeModule,
+    AppRoutingModule,
+    SystemModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
