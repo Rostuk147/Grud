@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/forms';
-import { PostService } from '../../service/post.service';
+import { PostService } from '../../shared/service/post.service';
 @Component({
   selector: 'app-dialog-overview-example-dialog',
   templateUrl: './dialog-overview-example-dialog.component.html',
@@ -12,7 +12,7 @@ export class DialogOverviewExampleDialogComponent implements OnInit {
   constructor(
     private service: PostService,
     public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) { 
+    @Inject(MAT_DIALOG_DATA) public data: any) {
       this.form = new FormGroup({
         'name': new FormControl(null, [Validators.required]),
         'color': new FormControl(null, [Validators.required ]),
@@ -31,7 +31,7 @@ export class DialogOverviewExampleDialogComponent implements OnInit {
   }
 
   ngOnInit() {
-   
+
   }
 
 }

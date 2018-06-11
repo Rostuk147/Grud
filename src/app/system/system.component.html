@@ -13,7 +13,7 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
-          
+
             <div class="add-form">
                 <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
                     <mat-form-field class="example-full-width">
@@ -22,7 +22,7 @@
                             Name is <strong>required</strong>
                         </mat-error>
                     </mat-form-field>
-                
+
                     <mat-form-field class="example-full-width">
                         <input  matInput placeholder="Color"  formControlName = "color">
                         <mat-error *ngIf="form.get('color').invalid && form.get('color').touched">
@@ -44,12 +44,12 @@
                 <div class="row wrapper">
                     <div class="col-md-2">
                         <span>Name:</span>
-                        {{post.name}} 
+                        {{post.name}}
                     </div>
 
                     <div class="col-md-2">
                         <span>Color:</span>
-                        {{post.color}} 
+                        {{post.color}}
                     </div>
 
                     <div class="col-md-2">
@@ -64,6 +64,9 @@
                     <div class="col-md-2">
                         <button (click)="openDialogDelete(post, posts)"  mat-raised-button color="warn">Delete</button>
                     </div>
+                  <div class="col-md-2">
+                    <a [routerLink]="['/product', post.id]">Detail</a>
+                  </div>
                 </div>
             </div>
         </div>
@@ -76,4 +79,4 @@
     </div>
 
 </div>
-</div> 
+</div>

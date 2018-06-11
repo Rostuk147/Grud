@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { PostService } from '../../service/post.service';
-import { User } from '../../models/user.model';
+import { User } from '../../shared/models/user.model';
 import { AuthService } from '../auth.service';
 import { Title } from '@angular/platform-browser';
+import {PostService} from "../../shared/service/post.service";
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute,
     private auth: AuthService,
     private title: Title
-  ) { 
+  ) {
     title.setTitle('Login');
   }
 

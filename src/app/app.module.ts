@@ -5,16 +5,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModel, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app.routing.module';
-import { NotfoundComponent } from './notfound/notfound.component';
+import { NotfoundComponent } from './shared/notfound/notfound.component';
 import { HomeModule } from './home/home.module';
-import { SystemModule } from './system/system.module';
 import { SharedModule } from './shared/shared.module';
+import {DescriptionPostComponent} from "./system/description-post/description-post.component";
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NotfoundComponent,
+    DescriptionPostComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,6 @@ import { SharedModule } from './shared/shared.module';
     AuthModule,
     HomeModule,
     AppRoutingModule,
-    SystemModule,
     SharedModule
   ],
   providers: [],

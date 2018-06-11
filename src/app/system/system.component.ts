@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { PostService } from '../service/post.service';
+import { PostService } from '../shared/service/post.service';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
-import { Post } from '../models/post.model';
+import { Post } from '../shared/models/post.model';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { Title } from '@angular/platform-browser';
 import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
@@ -31,7 +31,7 @@ export class SystemComponent implements OnInit {
   openDialog(post): void {
     let dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
       width: '550px',
-      data: { 
+      data: {
         name: post.name,
         color: post.color,
         price: post.price,
@@ -46,7 +46,7 @@ export class SystemComponent implements OnInit {
   openDialogDelete(post, posts): void{
     let dialogRef = this.dialog.open(DialogDeleteComponent, {
       width: '550px',
-      data: { 
+      data: {
         name: post.name,
         color: post.color,
         price: post.price,
@@ -65,7 +65,7 @@ export class SystemComponent implements OnInit {
       this.posts = post;
     });
   }
-  
+
   ngOnInit() {
     this.fnGetPosts();
 

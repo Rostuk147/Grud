@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { User } from '../../models/user.model';
-import { PostService } from '../../service/post.service';
+import { User } from '../../shared/models/user.model';
+import { PostService } from '../../shared/service/post.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
@@ -19,7 +19,7 @@ export class RegistrationComponent implements OnInit {
     private service: PostService,
     private router: Router,
     private title: Title
-  ) { 
+  ) {
     title.setTitle('Registration');
   }
 
@@ -57,7 +57,7 @@ export class RegistrationComponent implements OnInit {
         this.form.get('repeatPassword')['errors']['passwordConfirm'] ? 'Password does not match the confirm password' :
         '';
   }
-  
+
   getErrorMessageSelect() {
     return this.form.get('select')['errors']['required'] ? 'select Required' :
         '';
@@ -69,7 +69,7 @@ export class RegistrationComponent implements OnInit {
     if(control.value === password){
       console.log(' confirm')
       return null;
-    } 
+    }
       console.log('not confirm')
       return {"passwordConfirm": true};
   }
@@ -102,6 +102,4 @@ export class RegistrationComponent implements OnInit {
       });
     });
   }
-
-
 }

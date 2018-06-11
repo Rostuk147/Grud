@@ -4,12 +4,12 @@ import { SystemComponent } from './system.component';
 import { MatInputModule, MatButtonModule, MatDialogModule, MatSelectModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SearchPipe } from '../search.pipe';
-import { PostService } from '../service/post.service';
+import { PostService } from '../shared/service/post.service';
 import { SystemRoutingModule } from './system.routing.module';
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
+import {SearchPipe} from "../shared/pipes/search.pipe";
 
 
 @NgModule({
@@ -29,7 +29,8 @@ import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
     SystemComponent,
     DialogOverviewExampleDialogComponent,
     SearchPipe,
-    DialogDeleteComponent
+    DialogDeleteComponent,
+
   ],
   entryComponents: [
     DialogOverviewExampleDialogComponent,

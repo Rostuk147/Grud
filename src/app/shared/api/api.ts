@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 
 @Injectable()
-export class BaseApi {
+export class Api {
     private baseUrl = 'http://localhost:3000/';
     constructor(public http: HttpClient){}
 
@@ -13,18 +13,18 @@ export class BaseApi {
 
     public get(url: string = '') {
         return this.http.get(this.getUrl(url));
-    } 
+    }
 
     public post(url: string = '', data: any = {}) {
         return this.http.post(this.getUrl(url), data);
-    } 
+    }
 
     public delete(url: string = '') {
         return this.http.delete(this.getUrl(url));
-    } 
+    }
 
     public put(url: string = '', data: any = {}) {
         return this.http.put(this.getUrl(url), data);
-    } 
+    }
 
 }

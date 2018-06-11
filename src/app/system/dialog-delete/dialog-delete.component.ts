@@ -1,8 +1,8 @@
 import { Component, Inject, Input} from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
-import { Post } from '../../models/post.model';
-import { PostService } from '../../service/post.service';
+import { Post } from '../../shared/models/post.model';
+import { PostService } from '../../shared/service/post.service';
 
 
 @Component({
@@ -14,9 +14,9 @@ export class DialogDeleteComponent {
     constructor(
       private service: PostService,
       public dialogRef: MatDialogRef<DialogOverviewExampleDialogComponent>,
-      @Inject(MAT_DIALOG_DATA) public data: any) { 
+      @Inject(MAT_DIALOG_DATA) public data: any) {
     }
-   
+
   posts: Post[];
 
   onNoClick(): void {
@@ -37,5 +37,5 @@ export class DialogDeleteComponent {
       this.dialogRef.close();
     });
   }
- 
+
 }

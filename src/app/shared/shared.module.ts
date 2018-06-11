@@ -4,6 +4,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { RouterModule, Routes } from '@angular/router';
+import {PostService} from "./service/post.service";
 
 
 @NgModule({
@@ -16,6 +17,9 @@ import { RouterModule, Routes } from '@angular/router';
   exports: [
     HeaderComponent,
     FooterComponent
+  ],
+  providers: [
+    PostService
   ]
 })
 export class SharedModule { }
