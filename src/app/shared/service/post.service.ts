@@ -26,12 +26,5 @@ export class PostService extends Api{
     editPut(id, data) {
         return this.put(`posts/${id}`,data);
     }
-    createNewUser(user: User){
-      return this.post('users', user);
-    }
 
-    getUserByEmail(email){
-      return this.get(`users?email=${email}`)
-        .map((user) => user[0] ? user[0] : undefined);
-    }
 }

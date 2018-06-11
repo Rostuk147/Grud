@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../../auth/auth.service';
+import {AuthIsLoggin} from "../../../auth/auth.isLoggin";
+
 
 @Component({
   selector: 'app-header',
@@ -13,19 +14,17 @@ export class HeaderComponent implements OnInit {
   userName = '';
 
   constructor(
-    private auth: AuthService,
+    private auth: AuthIsLoggin,
     private route: Router
   ) { }
 
   ngOnInit() {
     this.userName = JSON.parse(window.localStorage.getItem('user'));
-    console.log(this.userName.length);
   }
 
   onLogout() {
     this.auth.logOut();
-    this.userName = null;
-    this.route.navigate(['/login']);
+    this.route.navigate(['/auth/login']);
   }
 
 }

@@ -1,9 +1,9 @@
 import { Component, OnInit, Renderer } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { User } from '../../shared/models/user.model';
-import { PostService } from '../../shared/service/post.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+import {AuthService} from "../../shared/service/auth.service";
 
 
 @Component({
@@ -16,7 +16,7 @@ export class RegistrationComponent implements OnInit {
   form: FormGroup;
   value: any;
   constructor(
-    private service: PostService,
+    private service: AuthService,
     private router: Router,
     private title: Title
   ) {
@@ -95,7 +95,7 @@ export class RegistrationComponent implements OnInit {
     const user = new User(name, email, password, select);
     this.service.createNewUser(user)
     .subscribe((user: User) => {
-      this.router.navigate(['/login'], {
+      this.router.navigate(['/auth/login'], {
         queryParams: {
           nowCanLogin: true
         }

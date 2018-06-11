@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { User } from '../../shared/models/user.model';
-import { AuthService } from '../auth.service';
+
 import { Title } from '@angular/platform-browser';
-import {PostService} from "../../shared/service/post.service";
+
+import {AuthIsLoggin} from "../auth.isLoggin";
+import {AuthService} from "../../shared/service/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -17,10 +19,10 @@ export class LoginComponent implements OnInit {
   signIn = false;
 
   constructor(
-    private service: PostService,
+    private service: AuthService,
     private router: Router,
     private route: ActivatedRoute,
-    private auth: AuthService,
+    private auth: AuthIsLoggin,
     private title: Title
   ) {
     title.setTitle('Login');

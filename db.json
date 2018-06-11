@@ -25,12 +25,6 @@
       "id": 30
     },
     {
-      "name": "MyProduct",
-      "color": "yellow",
-      "price": 1,
-      "id": 31
-    },
-    {
       "name": "Pineapple",
       "color": "white",
       "price": 10,
@@ -115,6 +109,20 @@
       "password": "Shared",
       "gender": "Male",
       "id": 7
+    },
+    {
+      "name": "TestName",
+      "email": "testmane@mail.ru",
+      "password": "TestName",
+      "gender": "Male",
+      "id": 8
+    },
+    {
+      "name": "name",
+      "email": "name@mail.ru",
+      "password": "namename",
+      "gender": "Male",
+      "id": 9
     }
   ]
 }
