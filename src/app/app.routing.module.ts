@@ -3,7 +3,6 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
-import { SystemComponent } from './system/system.component';
 import {DescriptionPostComponent} from "./system/description-post/description-post.component";
 
 const routes: Routes = [

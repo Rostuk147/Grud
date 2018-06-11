@@ -108,6 +108,13 @@
       "password": "Test123",
       "gender": "Male",
       "id": 6
+    },
+    {
+      "name": "Shared",
+      "email": "shared@mail.ru",
+      "password": "Shared",
+      "gender": "Male",
+      "id": 7
     }
   ]
 }
