@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import {AuthIsLoggin} from "../../../auth/auth.isLoggin";
 
@@ -20,11 +20,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.userName = JSON.parse(window.localStorage.getItem('user'));
+    console.log(this.userName)
   }
+
+
 
   onLogout() {
     this.auth.logOut();
-    this.route.navigate(['/auth/login']);
+    this.route.navigate(['/']);
   }
 
 }

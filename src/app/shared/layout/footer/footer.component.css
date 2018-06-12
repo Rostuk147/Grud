@@ -1,6 +1,9 @@
 .mat-toolbar.mat-primary{
     padding: 25px 0;;
 }
+footer .mat-toolbar-row, .mat-toolbar-single-row{
+  height: inherit;
+}
 a{
     color: #fff;
 }

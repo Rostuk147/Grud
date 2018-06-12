@@ -9,6 +9,7 @@ import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 
 
+
 @NgModule({
   imports: [
     CommonModule,

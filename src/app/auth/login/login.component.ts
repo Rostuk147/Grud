@@ -5,8 +5,8 @@ import { User } from '../../shared/models/user.model';
 
 import { Title } from '@angular/platform-browser';
 
-import {AuthIsLoggin} from "../auth.isLoggin";
 import {AuthService} from "../../shared/service/auth.service";
+import {AuthIsLoggin} from "../auth.isLoggin";
 
 @Component({
   selector: 'app-login',

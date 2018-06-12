@@ -4,11 +4,13 @@ import { AuthComponent } from './auth/auth.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import {DescriptionPostComponent} from "./system/description-post/description-post.component";
+import {AuthGuard} from "./auth/auth-guard.service";
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'auth', component: AuthComponent},
-  {path: 'system', loadChildren: './system/system.module#SystemModule'},
+  {path: 'system', canActivate: [AuthGuard],  loadChildren: './system/system.module#SystemModule'},
   {path: 'product/:id', component: DescriptionPostComponent},
   {path: '**', component: NotfoundComponent}
 ];
