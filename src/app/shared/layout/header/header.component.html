@@ -1,14 +1,16 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>CRUD</span>
-    <span class="date">{{date | date:'dd.MM.yyyy'}}</span>
-    <div class="right">
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <a routerLink="/">CRUD</a>
+      <span class="date">{{date | date:'dd.MM.yyyy'}}</span>
+      <div class="right">
       <span class="name">
-        Welcome: {{userName}}
+        <!--Welcome: {{userName}}-->
       </span>
-      <div class="logOut" (click)="onLogout()">
-        Log Out
+        <div class="logOut" (click)="onLogout()">
+          Log Out
+        </div>
       </div>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
