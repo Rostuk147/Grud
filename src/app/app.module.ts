@@ -11,8 +11,6 @@ import {DescriptionPostComponent} from "./system/description-post/description-po
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

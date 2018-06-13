@@ -10,16 +10,14 @@ import {PostService} from "./service/post.service";
 import {SearchPipe} from "../shared/pipes/search.pipe";
 
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { MatInputModule, MatSelectModule, MatButtonModule, MatIconModule, MatDialogModule } from '@angular/material';
+import {MatInputModule, MatSelectModule, MatButtonModule, MatIconModule, MatDialogModule} from '@angular/material';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {NotfoundComponent} from "./notfound/notfound.component";
 import {AuthService} from "./service/auth.service";
 import {AuthIsLoggin} from "../auth/auth.isLoggin";
 import {AuthGuard} from "../auth/auth-guard.service";
 import {AuthIsLogginGuard} from "../auth/auth.isLoggin.guard";
-
-
-
 
 
 @NgModule({
@@ -35,7 +33,8 @@ import {AuthIsLogginGuard} from "../auth/auth.isLoggin.guard";
     MatButtonModule,
     MatIconModule,
     MatCheckboxModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
   ],
   declarations: [
     HeaderComponent,
@@ -54,6 +53,7 @@ import {AuthIsLogginGuard} from "../auth/auth.isLoggin.guard";
     MatIconModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatSnackBarModule,
     SearchPipe
   ],
   providers: [

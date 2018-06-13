@@ -6,7 +6,7 @@
           <div class="col">
             <ul>
               <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
-              <li routerLinkActive="active"><a routerLink="/system">System</a></li>
+              <li routerLinkActive="active"><a routerLink="/system" (click)="openSnackBar()">System</a></li>
             </ul>
           </div>
           <div class="col">
