@@ -10,10 +10,14 @@
             </ul>
           </div>
           <div class="col">
-            <ul class="text-right">
+            <ul  *ngIf="!auth.isLoggedIn" class="text-right">
               <li routerLinkActive="active"><a routerLink="/auth/login">Sign In</a></li>
               <li routerLinkActive="active"><a routerLink="/auth/registration">Sign Up</a></li>
             </ul>
+
+            <div  *ngIf="auth.isLoggedIn" class="logOut text-right" (click)="onLogout()">
+              Log Out
+            </div>
           </div>
         </div>
       </div>

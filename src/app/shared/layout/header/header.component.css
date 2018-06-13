@@ -3,6 +3,9 @@ span.date{
     display: inline-block;
     font-size: 15px;
 }
+.logo{
+  color: #fff;
+}
 .right{
     text-align: right;
     display: block;
@@ -27,4 +30,17 @@ header{
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.head-nav{
+  display: inline-block;
+}
+.head-nav li{
+  text-decoration: none;
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 15px;
+}
+.head-nav li a{
+  color: #fff;
 }

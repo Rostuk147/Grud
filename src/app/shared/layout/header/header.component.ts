@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   date: Date = new Date();
   userName = '';
 
+
   constructor(
     private auth: AuthIsLoggin,
     private route: Router
@@ -20,10 +21,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.userName = JSON.parse(window.localStorage.getItem('user'));
-    console.log(this.userName)
   }
-
-
 
   onLogout() {
     this.auth.logOut();

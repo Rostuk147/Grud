@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthIsLoggin} from "../../../auth/auth.isLoggin";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private auth: AuthIsLoggin,
+    private route: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  onLogout() {
+    this.auth.logOut();
+    this.route.navigate(['/']);
   }
 
 }

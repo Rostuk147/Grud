@@ -5,11 +5,12 @@ import { NotfoundComponent } from './shared/notfound/notfound.component';
 import { HomeComponent } from './home/home.component';
 import {DescriptionPostComponent} from "./system/description-post/description-post.component";
 import {AuthGuard} from "./auth/auth-guard.service";
+import {AuthIsLogginGuard} from "./auth/auth.isLoggin.guard";
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'auth', component: AuthComponent},
+  {path: 'auth', canActivate: [AuthIsLogginGuard], component: AuthComponent},
   {path: 'system', canActivate: [AuthGuard],  loadChildren: './system/system.module#SystemModule'},
   {path: 'product/:id', component: DescriptionPostComponent},
   {path: '**', component: NotfoundComponent}

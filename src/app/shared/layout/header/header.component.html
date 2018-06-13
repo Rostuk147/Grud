@@ -1,15 +1,19 @@
 
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <a routerLink="/">CRUD</a>
+      <a class="logo" routerLink="/">CRUD</a>
       <span class="date">{{date | date:'dd.MM.yyyy'}}</span>
       <div class="right">
       <span class="name">
         <!--Welcome: {{userName}}-->
       </span>
-        <div class="logOut" (click)="onLogout()">
+        <div  *ngIf="auth.isLoggedIn" class="logOut" (click)="onLogout()">
           Log Out
         </div>
+        <ul *ngIf="!auth.isLoggedIn" class="head-nav">
+          <li routerLinkActive="active"><a routerLink="/auth/login">Sign In</a></li>
+          <li routerLinkActive="active"><a routerLink="/auth/registration">Sign Up</a></li>
+        </ul>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
