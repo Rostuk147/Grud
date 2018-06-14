@@ -19,36 +19,6 @@
       "id": 29
     },
     {
-      "name": "sf",
-      "color": "sdf",
-      "price": 2,
-      "id": 30
-    },
-    {
-      "name": "Pineapple",
-      "color": "white",
-      "price": 10,
-      "id": 32
-    },
-    {
-      "name": "SomeProduct1",
-      "color": "white",
-      "price": 101,
-      "id": 33
-    },
-    {
-      "name": "SomeProduct2",
-      "color": "orange",
-      "price": 4,
-      "id": 34
-    },
-    {
-      "name": "SomeProduct3",
-      "color": "blue",
-      "price": 44,
-      "id": 35
-    },
-    {
       "name": "SomeProduct4",
       "color": "black",
       "price": 441,
@@ -65,6 +35,18 @@
       "color": "yellow",
       "price": 123,
       "id": 38
+    },
+    {
+      "name": "test",
+      "color": "color",
+      "price": 123,
+      "id": 39
+    },
+    {
+      "name": "TestVova",
+      "color": "Black",
+      "price": 123,
+      "id": 40
     }
   ],
   "users": [
@@ -123,6 +105,13 @@
       "password": "namename",
       "gender": "Male",
       "id": 9
+    },
+    {
+      "name": "Vova",
+      "email": "vova@mail.ru",
+      "password": "testtest",
+      "gender": "Male",
+      "id": 10
     }
   ]
 }

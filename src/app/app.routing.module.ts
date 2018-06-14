@@ -9,7 +9,7 @@ import {AuthIsLogginGuard} from "./auth/auth.isLoggin.guard";
 
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: HomeComponent, pathMatch: 'full'},
   {path: 'auth', canActivate: [AuthIsLogginGuard], component: AuthComponent},
   {path: 'system', canActivate: [AuthGuard],  loadChildren: './system/system.module#SystemModule'},
   {path: 'product/:id', component: DescriptionPostComponent},
