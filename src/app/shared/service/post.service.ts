@@ -17,7 +17,7 @@ export class PostService extends Api{
 
     getSinglePost(id){
       return this.get(`posts?id=${id}`)
-        .map((user) => user[0] ? user[0] : undefined);
+        .map((post) => post[0] ? post[0] : undefined);
     }
 
     addPost(data) {

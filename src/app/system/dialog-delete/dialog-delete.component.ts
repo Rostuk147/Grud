@@ -1,7 +1,6 @@
 import { Component, Inject, Input} from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { DialogOverviewExampleDialogComponent } from '../dialog-overview-example-dialog/dialog-overview-example-dialog.component';
-import { Post } from '../../shared/models/post.model';
 import { PostService } from '../../shared/service/post.service';
 import {Router} from "@angular/router";
 
@@ -31,7 +30,7 @@ export class DialogDeleteComponent {
     this.service.deletePost(post)
     .subscribe((data) => {
       this.dialogRef.close();
-      this.router.navigate(['/system/catalog'];
+      this.router.navigate(['system/catalog']);
     });
   }
 

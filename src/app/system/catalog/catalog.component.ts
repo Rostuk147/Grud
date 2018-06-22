@@ -27,30 +27,11 @@ export class CatalogComponent implements OnInit {
   }
 
 
-  fnGetPosts() {
-    this.service.getPost()
-    .subscribe(( post: Post[]) => {
-      this.posts = post;
-    });
-  }
-
   ngOnInit() {
-    this.fnGetPosts();
-
-    this.form = new FormGroup({
-      'name': new FormControl(null, [Validators.required]),
-      'color': new FormControl(null, [Validators.required]),
-      'price': new FormControl(null, [Validators.required]),
-      'description': new FormControl(null, [Validators.required])
-    });
-  }
-
-  onSubmit(){
-    const formValue = this.form.value;
-    this.service.addPost(formValue)
-    .subscribe((post: any) => {
-      this.posts.push(post);
-    });
+    this.service.getPost()
+      .subscribe(( post: Post[]) => {
+        this.posts = post;
+      });
   }
 
 

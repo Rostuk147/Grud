@@ -1,15 +1,17 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
       <div class="wrapper">
-        <a [routerLink]="'/system/catalog'">Back to catalog</a>
-        <p *ngIf="canLoad">
-          <span>Name: {{post.name}}</span>
-          <span>Color: {{post.color}}</span>
-          <span>Price: {{post.price}}</span>
-        </p>
+        <div class="row">
+          <div class="col-md-12">
+            <a class="link"  mat-raised-button [routerLink]="'/system/catalog'">Back to catalog</a>
+            <div *ngIf="canLoad">
+              <p>Name: {{post.name}}</p>
+              <p>Color: {{post.color}}</p>
+              <p>Price: {{post.price}}</p>
+              <p>Description: {{post.description}}</p>
+            </div>
+          </div>
 
-        <div class=" col-md-1 offset-md-1">
+        <div class="col-md-1">
           <button mat-raised-button  (click)="openDialog(post)" color="accent">Edit</button>
         </div>
 
@@ -17,6 +19,5 @@
           <button (click)="openDialogDelete(post)"  mat-raised-button color="warn">Delete</button>
         </div>
       </div>
-    </div>
   </div>
 </div>

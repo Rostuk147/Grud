@@ -1,5 +1,69 @@
 {
-  "posts": [],
+  "posts": [
+    {
+      "name": "nameChange",
+      "color": "colorChange",
+      "price": 12,
+      "description": "descrChange",
+      "id": 1
+    },
+    {
+      "name": "dsg",
+      "color": "sdg",
+      "price": 3,
+      "description": "sdg",
+      "id": 2
+    },
+    {
+      "name": "test12",
+      "color": "123",
+      "price": 1242,
+      "description": "testDescription",
+      "id": 3
+    },
+    {
+      "name": "dsf",
+      "color": "df",
+      "price": 1,
+      "description": "dfd",
+      "id": 4
+    },
+    {
+      "name": "sdf",
+      "color": "sdf",
+      "price": 2,
+      "description": "fd",
+      "id": 5
+    },
+    {
+      "name": "sdf",
+      "color": "sdf",
+      "price": 2,
+      "description": "fd",
+      "id": 6
+    },
+    {
+      "name": "sdgf",
+      "color": "dsg",
+      "price": 1,
+      "description": "ewf",
+      "id": 7
+    },
+    {
+      "name": "fd",
+      "color": "df",
+      "price": 1,
+      "description": "sdfg",
+      "id": 8
+    },
+    {
+      "name": "fedwrf",
+      "color": "wef",
+      "price": 2,
+      "description": "fdf",
+      "id": 9
+    }
+  ],
   "users": [
     {
       "name": "sdfedc",
