@@ -15,6 +15,11 @@ export class PostService extends Api{
         return this.get('posts')
     }
 
+    getSinglePost(id){
+      return this.get(`posts?id=${id}`)
+        .map((user) => user[0] ? user[0] : undefined);
+    }
+
     addPost(data) {
         return this.post('posts', data);
     }
