@@ -16,7 +16,8 @@ export class DialogOverviewExampleDialogComponent implements OnInit {
       this.form = new FormGroup({
         'name': new FormControl(null, [Validators.required]),
         'color': new FormControl(null, [Validators.required ]),
-        'price': new FormControl(null, [Validators.required ])
+        'price': new FormControl(null, [Validators.required ]),
+        'description': new FormControl(null, [Validators.required ])
       })
     }
 

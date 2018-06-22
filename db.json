@@ -1,54 +1,5 @@
 {
-  "posts": [
-    {
-      "name": "Product1",
-      "color": "white1",
-      "price": 231,
-      "id": 19
-    },
-    {
-      "name": "Product222",
-      "color": "dark12",
-      "price": 12312,
-      "id": 20
-    },
-    {
-      "name": "Apple",
-      "color": "black",
-      "price": "12345678",
-      "id": 29
-    },
-    {
-      "name": "SomeProduct4",
-      "color": "black",
-      "price": 441,
-      "id": 36
-    },
-    {
-      "name": "tesr1",
-      "color": "dark",
-      "price": 88,
-      "id": 37
-    },
-    {
-      "name": "test123",
-      "color": "yellow",
-      "price": 123,
-      "id": 38
-    },
-    {
-      "name": "test",
-      "color": "color",
-      "price": 123,
-      "id": 39
-    },
-    {
-      "name": "TestVova",
-      "color": "Black",
-      "price": 123,
-      "id": 40
-    }
-  ],
+  "posts": [],
   "users": [
     {
       "name": "sdfedc",

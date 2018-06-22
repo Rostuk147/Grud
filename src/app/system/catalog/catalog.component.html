@@ -35,6 +35,16 @@
                 Price is <strong>required</strong>
               </mat-error>
             </mat-form-field>
+
+
+
+            <mat-form-field class="example-full-width">
+              <input  type="text" matInput placeholder="Description"  formControlName = "description">
+              <mat-error *ngIf="form.get('description').invalid && form.get('description').touched">
+                Description is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
             <button [disabled]="form.invalid" type="submit" mat-raised-button color="primary">Add New Post</button>
           </form>
         </div>
@@ -56,13 +66,11 @@
               {{post.price}}
             </div>
 
-            <div class=" col-md-1 offset-md-1">
-              <button mat-raised-button  (click)="openDialog(post)" color="accent">Edit</button>
+            <div class="col-md-2">
+              <span>Descr:</span>
+              {{post.description}}
             </div>
 
-            <div class="col-md-2">
-              <button (click)="openDialogDelete(post, posts)"  mat-raised-button color="warn">Delete</button>
-            </div>
             <div class="col-md-2">
               <a [routerLink]="['/system/catalog/product', post.id]">Detail</a>
             </div>

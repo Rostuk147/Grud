@@ -3,7 +3,7 @@
         <mat-form-field class="example-full-width">
             <input matInput placeholder="name"  formControlName="name" value="{{data.name}}">
         </mat-form-field>
-                
+
         <mat-form-field class="example-full-width">
             <input matInput placeholder="Color"  formControlName="color" value="{{data.color}}">
         </mat-form-field>
@@ -11,6 +11,10 @@
         <mat-form-field class="example-full-width">
             <input type="number" matInput placeholder="Price"  formControlName="price" value="{{data.price}}">
         </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input type="text" matInput placeholder="Description"  formControlName="description" value="{{data.description}}">
+      </mat-form-field>
 
         <button [disabled]="form.invalid" mat-raised-button color="primary" (click) = 'Edit()'>Ok</button>
     </form>

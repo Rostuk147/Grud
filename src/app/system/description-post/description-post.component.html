@@ -2,9 +2,20 @@
   <div class="row">
     <div class="col">
       <div class="wrapper">
-        <p>
-          <span>Iteaam ID: {{posts}}</span>
+        <a [routerLink]="'/system/catalog'">Back to catalog</a>
+        <p *ngIf="canLoad">
+          <span>Name: {{post.name}}</span>
+          <span>Color: {{post.color}}</span>
+          <span>Price: {{post.price}}</span>
         </p>
+
+        <div class=" col-md-1 offset-md-1">
+          <button mat-raised-button  (click)="openDialog(post)" color="accent">Edit</button>
+        </div>
+
+        <div class="col-md-2">
+          <button (click)="openDialogDelete(post)"  mat-raised-button color="warn">Delete</button>
+        </div>
       </div>
     </div>
   </div>
