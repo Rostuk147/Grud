@@ -10,6 +10,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { AddProductComponent } from './add-product/add-product.component';
 import {DescriptionPostComponent} from "./description-post/description-post.component";
 import { CatalogComponent } from './catalog/catalog.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -18,7 +19,8 @@ import { CatalogComponent } from './catalog/catalog.component';
     CommonModule,
     SystemRoutingModule,
     NgxPaginationModule,
-    SharedModule
+    SharedModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     SystemComponent,

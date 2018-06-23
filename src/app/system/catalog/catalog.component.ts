@@ -3,7 +3,7 @@ import { Validators, FormControl, FormGroup } from '@angular/forms';
 import {Post} from "../../shared/models/post.model";
 import {PostService} from "../../shared/service/post.service";
 import {Title} from "@angular/platform-browser";
-
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-catalog',
@@ -18,6 +18,7 @@ export class CatalogComponent implements OnInit {
   searchName = '';
   selected = '';
   page: number = 1;
+  canLoad:boolean = false;
 
   constructor(
     private service: PostService,
@@ -28,10 +29,14 @@ export class CatalogComponent implements OnInit {
 
 
   ngOnInit() {
-    this.service.getPost()
-      .subscribe(( post: Post[]) => {
-        this.posts = post;
-      });
+    // Just simulate long request on the server
+      window.setTimeout(()=>{
+        this.service.getPost()
+          .subscribe(( post: Post[]) => {
+          this.posts = post;
+        });
+        this.canLoad = true;
+    }, 1000)
   }
 
 

@@ -18,7 +18,7 @@ import {AuthService} from "./service/auth.service";
 import {AuthIsLoggin} from "../auth/auth.isLoggin";
 import {AuthGuard} from "../auth/auth-guard.service";
 import {AuthIsLogginGuard} from "../auth/auth.isLoggin.guard";
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -34,7 +34,8 @@ import {AuthIsLogginGuard} from "../auth/auth.isLoggin.guard";
     MatIconModule,
     MatCheckboxModule,
     MatDialogModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
   declarations: [
     HeaderComponent,

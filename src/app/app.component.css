@@ -28,6 +28,7 @@ header{
 }
 .footer {
   flex: 0 0 auto;
+  z-index: 100;
 }
 
 .wrapper span{

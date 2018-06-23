@@ -44,3 +44,8 @@
     <pagination-controls (pageChange)="page = $event" class="pagination"></pagination-controls>
   </div>
 </div>
+
+
+<div *ngIf="!canLoad" class="spinner-wrapper">
+  <mat-spinner></mat-spinner>
+</div>
