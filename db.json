@@ -73,60 +73,11 @@
       "id": 1
     },
     {
-      "name": "VOva",
-      "email": "lola@mail.com",
-      "password": "testPass",
-      "gender": "Male",
-      "id": 3
-    },
-    {
-      "name": "Rostuk",
-      "email": "gavrk.r@yandex.ru",
+      "name": "vova",
+      "email": "vova@mail.ru",
       "password": "Lusyn1998",
       "gender": "Male",
-      "id": 4
-    },
-    {
-      "name": "Rostuk",
-      "email": "test.r@yandex.ru",
-      "password": "qwedsa",
-      "gender": "Male",
-      "id": 5
-    },
-    {
-      "name": "Test",
-      "email": "Test@mail.ru",
-      "password": "Test123",
-      "gender": "Male",
-      "id": 6
-    },
-    {
-      "name": "Shared",
-      "email": "shared@mail.ru",
-      "password": "Shared",
-      "gender": "Male",
-      "id": 7
-    },
-    {
-      "name": "TestName",
-      "email": "testmane@mail.ru",
-      "password": "TestName",
-      "gender": "Male",
-      "id": 8
-    },
-    {
-      "name": "name",
-      "email": "name@mail.ru",
-      "password": "namename",
-      "gender": "Male",
-      "id": 9
-    },
-    {
-      "name": "Vova",
-      "email": "vova@mail.ru",
-      "password": "testtest",
-      "gender": "Male",
-      "id": 10
+      "id": 2
     }
   ]
 }

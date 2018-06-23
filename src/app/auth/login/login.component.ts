@@ -66,7 +66,8 @@ export class LoginComponent implements OnInit {
           const userName = user.name;
           window.localStorage.setItem('user', JSON.stringify(userName));
           this.auth.login();
-          this.router.navigate(['/system'])
+          this.router.navigate(['/system/catalog'])
+          console.log('test')
         } else{
           this.signIn = true;
         }
