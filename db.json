@@ -76,6 +76,13 @@
       "price": 101,
       "description": "Descriptionf",
       "id": 11
+    },
+    {
+      "name": "TestProdd",
+      "color": "white",
+      "price": 20,
+      "description": "descriptionnsfdsf",
+      "id": 12
     }
   ],
   "users": [
@@ -92,6 +99,13 @@
       "password": "Lusyn1998",
       "gender": "Male",
       "id": 2
+    },
+    {
+      "name": "Rostuk",
+      "email": "gavrk.r@yandex.ru",
+      "password": "Lusyn1998",
+      "gender": "Male",
+      "id": 3
     }
   ]
 }
