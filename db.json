@@ -62,6 +62,20 @@
       "price": 2,
       "description": "fdf",
       "id": 9
+    },
+    {
+      "name": "Prodcut",
+      "color": "White",
+      "price": 10,
+      "description": "Description",
+      "id": 10
+    },
+    {
+      "name": "Prodcut2",
+      "color": "White3",
+      "price": 101,
+      "description": "Descriptionf",
+      "id": 11
     }
   ],
   "users": [

@@ -32,4 +32,8 @@ export class PostService extends Api{
         return this.put(`posts/${id}`,data);
     }
 
+    paginate(pageNumber){
+      return this.get(`posts?_page=${pageNumber}&_limit=5`)
+    }
+
 }

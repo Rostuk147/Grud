@@ -14,11 +14,12 @@ import { delay } from 'rxjs/operators';
 
 export class CatalogComponent implements OnInit {
   form: FormGroup;
-  posts: Post[] ;
+  posts: Post[] = [] ;
+  onlyFirstPost: Post[] = [];
   searchName = '';
   selected = '';
-  page: number = 1;
   canLoad:boolean = false;
+  pageNumber = [];
 
   constructor(
     private service: PostService,
@@ -29,15 +30,43 @@ export class CatalogComponent implements OnInit {
 
 
   ngOnInit() {
-    // Just simulate long request on the server
+    // Just simulate long answer from server
       window.setTimeout(()=>{
         this.service.getPost()
           .subscribe(( post: Post[]) => {
           this.posts = post;
+          this.posts.forEach((value,index)=>{
+            if(index < 5 ){
+              this.onlyFirstPost.push(value)
+            } else{
+              return false;
+            }
+          });
+            this.createPage()
         });
         this.canLoad = true;
-    }, 1000)
+    }, 500)
   }
+
+
+
+  createPage(){
+    this.pageNumber.length = Math.ceil(this.posts.length / 5);
+  }
+
+
+  getPostOnSelecterPage(pageNumber){
+    // Just simulate long answer from server
+    this.canLoad = false;
+    window.setTimeout(()=>{
+      this.service.paginate(pageNumber)
+        .subscribe((posts:Post[])=>{
+          this.onlyFirstPost = posts;
+          this.canLoad = true;
+        })
+    },500);
+  }
+
 
 
   searchFilter = [
@@ -57,9 +86,9 @@ export class CatalogComponent implements OnInit {
 
   filterIteams(selected){
     if(selected === 'Price'){
-      this.posts.sort(this.priceFilter);
+      this.onlyFirstPost.sort(this.priceFilter);
     } else {
-       this.posts.sort(this.nameFilter);
+       this.onlyFirstPost.sort(this.nameFilter);
     }
   }
 }

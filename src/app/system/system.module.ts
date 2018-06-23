@@ -6,7 +6,6 @@ import {SharedModule} from "../shared/shared.module";
 
 import { DialogOverviewExampleDialogComponent } from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
 import { DialogDeleteComponent } from './dialog-delete/dialog-delete.component';
-import {NgxPaginationModule} from 'ngx-pagination';
 import { AddProductComponent } from './add-product/add-product.component';
 import {DescriptionPostComponent} from "./description-post/description-post.component";
 import { CatalogComponent } from './catalog/catalog.component';
@@ -18,7 +17,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
   imports: [
     CommonModule,
     SystemRoutingModule,
-    NgxPaginationModule,
     SharedModule,
     MatProgressSpinnerModule
   ],

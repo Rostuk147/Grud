@@ -10,8 +10,10 @@ import {AuthComponent} from "./auth/auth.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch: 'full'},
+  // {path: 'auth', canActivate: [AuthIsLogginGuard], component: AuthComponent},
+  // {path: 'system', canActivate: [AuthGuard],  loadChildren: './system/system.module#SystemModule'},
   {path: 'auth', canActivate: [AuthIsLogginGuard], component: AuthComponent},
-  {path: 'system', canActivate: [AuthGuard],  loadChildren: './system/system.module#SystemModule'},
+  {path: 'system',   loadChildren: './system/system.module#SystemModule'},
   {path: '**', component: NotfoundComponent}
 ];
 

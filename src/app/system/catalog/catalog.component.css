@@ -51,7 +51,14 @@
   top: 50%;
   right: 50%;
 }
-
+.pagination{
+  margin: 100px 0 50px;
+  text-align: center;
+}
+.pagination-btn-wrapp{
+  display: inline-block;
+  margin-right: 10px;
+}
 
 
 
